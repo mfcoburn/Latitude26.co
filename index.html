@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latitude26 — Coming Soon</title>
+<meta name="description" content="Latitude26 is charting a new course. Sign up to be notified when we launch.">
+<meta property="og:title" content="Latitude26 — Coming Soon">
+<meta property="og:description" content="Latitude26 is charting a new course. Sign up to be notified when we launch.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%23c9a24b' stroke-width='6'/%3E%3Cline x1='4' y1='50' x2='96' y2='50' stroke='%23c9a24b' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="graticule" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <div class="coord" aria-hidden="true">26° 00&#8242; N</div>
+
+    <div class="mark">
+      <span class="mark-line"></span>
+      <h1 class="wordmark">LATITUDE<span class="accent">26</span></h1>
+      <span class="mark-line"></span>
+    </div>
+
+    <p class="tagline">We're charting a new course.</p>
+    <p class="sub">Something is on the way. Leave your email and we'll let you know the moment we launch.</p>
+
+    <form id="notify-form" class="notify-form" novalidate>
+      <label for="email" class="sr-only">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+      <button type="submit">Notify Me</button>
+    </form>
+    <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+    <footer class="footer">
+      <span id="year"></span> Latitude26. All rights reserved.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
