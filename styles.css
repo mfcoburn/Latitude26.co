@@ -146,6 +146,7 @@ body {
   max-width: 420px;
   margin: 0 auto;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .notify-form input[type="email"] {
