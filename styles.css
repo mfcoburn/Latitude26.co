@@ -1,0 +1,212 @@
+:root {
+  --bg: #0a0f16;
+  --bg-2: #0d1420;
+  --line: rgba(201, 162, 75, 0.14);
+  --ink: #eef1f5;
+  --ink-dim: #9aa7b8;
+  --gold: #c9a24b;
+  --gold-bright: #e4c179;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 50% -10%, #16202f 0%, var(--bg) 55%, var(--bg-2) 100%);
+  color: var(--ink);
+  font-family: "Helvetica Neue", Arial, "Segoe UI", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Latitude/longitude graticule backdrop */
+.graticule {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, var(--line) 0, var(--line) 1px, transparent 1px, transparent 8vh),
+    repeating-linear-gradient(90deg, var(--line) 0, var(--line) 1px, transparent 1px, transparent 8vh);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 45%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 45%, #000 30%, transparent 75%);
+  animation: drift 90s linear infinite;
+}
+
+@keyframes drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 -400px, 400px 0; }
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  padding: 8vh 1.75rem 3rem;
+  text-align: center;
+}
+
+.coord {
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  opacity: 0.75;
+  margin-bottom: 1.75rem;
+  text-transform: uppercase;
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mark-line {
+  height: 1px;
+  width: 2.5rem;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  opacity: 0.6;
+}
+
+.mark .mark-line:last-child {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.wordmark {
+  margin: 0;
+  font-size: clamp(1.9rem, 6vw, 3.1rem);
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+}
+
+.wordmark .accent {
+  color: var(--gold-bright);
+  font-weight: 500;
+}
+
+.tagline {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+  font-weight: 300;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.sub {
+  margin: 0 auto 2.5rem;
+  max-width: 420px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-dim);
+}
+
+.notify-form {
+  display: flex;
+  gap: 0.6rem;
+  max-width: 420px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.notify-form input[type="email"] {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 162, 75, 0.3);
+  border-radius: 4px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.notify-form input[type="email"]::placeholder {
+  color: var(--ink-dim);
+}
+
+.notify-form input[type="email"]:focus {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.notify-form button {
+  flex: 0 0 auto;
+  padding: 0.85rem 1.6rem;
+  background: var(--gold);
+  color: #10151d;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.notify-form button:hover {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+
+.notify-form button:active {
+  transform: translateY(1px);
+}
+
+.notify-form.is-success input,
+.notify-form.is-success button {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.form-message {
+  min-height: 1.4em;
+  margin: 0.9rem 0 0;
+  font-size: 0.85rem;
+  color: var(--gold-bright);
+}
+
+.form-message.error {
+  color: #e08a8a;
+}
+
+.footer {
+  margin-top: 4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-dim);
+  opacity: 0.6;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graticule {
+    animation: none;
+  }
+}

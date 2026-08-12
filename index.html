@@ -1,38 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Latitude26.co</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0b0b0f;
-      color: #f5f5f5;
-    }
-    main {
-      text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      color: #999;
-      margin: 0;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latitude26 — Concierge Medicine. Join the Waitlist.</title>
+<meta name="description" content="Latitude26 is a concierge medical practice charting a new course in personalized care. Join the waitlist to be first in line when we open.">
+<meta property="og:title" content="Latitude26 — Concierge Medicine. Join the Waitlist.">
+<meta property="og:description" content="Latitude26 is a concierge medical practice charting a new course in personalized care. Join the waitlist to be first in line when we open.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%23c9a24b' stroke-width='6'/%3E%3Cline x1='4' y1='50' x2='96' y2='50' stroke='%23c9a24b' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <h1>Latitude26.co</h1>
-    <p>Coming soon.</p>
+
+  <div class="graticule" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <div class="coord" aria-hidden="true">26° 00&#8242; N — CONCIERGE MEDICINE</div>
+
+    <div class="mark">
+      <span class="mark-line"></span>
+      <h1 class="wordmark">LATITUDE<span class="accent">26</span></h1>
+      <span class="mark-line"></span>
+    </div>
+
+    <p class="tagline">Concierge medicine, charted around you.</p>
+    <p class="sub">Latitude26 is a concierge medical practice built for unhurried care, direct access to your physician, and appointments on your schedule. Join the waitlist to be first in line when we open.</p>
+
+    <form id="notify-form" class="notify-form" novalidate>
+      <label for="email" class="sr-only">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+      <button type="submit">Join the Waitlist</button>
+    </form>
+    <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+    <footer class="footer">
+      <span id="year"></span> Latitude26. All rights reserved.
+    </footer>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
