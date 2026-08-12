@@ -9,6 +9,9 @@
 <meta property="og:description" content="Latitude26 is a concierge medical practice charting a new course in personalized care. Join the waitlist to be first in line when we open.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%23c9a24b' stroke-width='6'/%3E%3Cline x1='4' y1='50' x2='96' y2='50' stroke='%23c9a24b' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,15 +19,43 @@
   <div class="graticule" aria-hidden="true"></div>
 
   <main class="wrap">
-    <div class="coord" aria-hidden="true">26° 00&#8242; N — CONCIERGE MEDICINE</div>
+    <!-- Placeholder recreation of the compass/palm emblem — swap for the real logo.png once hosted at a fetchable URL -->
+    <svg class="logo-mark" viewBox="0 0 200 200" role="img" aria-label="Latitude26 compass emblem">
+      <g fill="none" stroke="var(--gold)" stroke-width="2">
+        <circle cx="100" cy="100" r="78"/>
+        <circle cx="100" cy="100" r="72"/>
+        <path d="M100 4 L108 22 L100 30 L92 22 Z" fill="var(--gold)" stroke="none"/>
+        <path d="M100 196 L108 178 L100 170 L92 178 Z" fill="var(--gold)" stroke="none"/>
+        <path d="M4 100 L22 92 L30 100 L22 108 Z" fill="var(--gold)" stroke="none"/>
+        <path d="M196 100 L178 92 L170 100 L178 108 Z" fill="var(--gold)" stroke="none"/>
+      </g>
+      <circle cx="132" cy="70" r="10" fill="none" stroke="#d9704a" stroke-width="2.5"/>
+      <g fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round">
+        <path d="M78 138 L78 92"/>
+        <path d="M78 96 C60 88 50 78 44 66"/>
+        <path d="M78 92 C64 82 56 70 52 56"/>
+        <path d="M78 94 C88 82 92 70 92 58"/>
+        <path d="M78 90 C92 80 102 68 108 54"/>
+        <path d="M78 88 C70 76 70 64 76 50"/>
+      </g>
+      <text x="145" y="98" text-anchor="middle" class="logo-degree">26°</text>
+      <g stroke="#5b8fc9" stroke-width="2.5" stroke-linecap="round">
+        <line x1="52" y1="146" x2="112" y2="146"/>
+        <line x1="58" y1="156" x2="118" y2="156"/>
+        <line x1="64" y1="166" x2="112" y2="166"/>
+      </g>
+    </svg>
+
+    <div class="coord" aria-hidden="true">26° 00&#8242; N</div>
 
     <div class="mark">
       <span class="mark-line"></span>
       <h1 class="wordmark">LATITUDE<span class="accent">26</span></h1>
       <span class="mark-line"></span>
     </div>
+    <p class="submark">Concierge Medical</p>
 
-    <p class="tagline">Concierge medicine, charted around you.</p>
+    <p class="tagline">Private medicine. Personal care. Prioritized for you.</p>
     <p class="sub">Latitude26 is a concierge medical practice built for unhurried care, direct access to your physician, and appointments on your schedule. Join the waitlist to be first in line when we open.</p>
 
     <form id="notify-form" class="notify-form" novalidate>

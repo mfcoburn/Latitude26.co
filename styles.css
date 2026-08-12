@@ -6,6 +6,8 @@
   --ink-dim: #9aa7b8;
   --gold: #c9a24b;
   --gold-bright: #e4c179;
+  --font-display: "Cinzel", "Helvetica Neue", serif;
+  --font-body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
@@ -25,7 +27,7 @@ body {
   background:
     radial-gradient(ellipse at 50% -10%, #16202f 0%, var(--bg) 55%, var(--bg-2) 100%);
   color: var(--ink);
-  font-family: "Helvetica Neue", Arial, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   overflow-x: hidden;
   position: relative;
 }
@@ -58,8 +60,23 @@ body {
   text-align: center;
 }
 
+.logo-mark {
+  width: clamp(84px, 18vw, 120px);
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.logo-degree {
+  font-family: var(--font-display);
+  font-size: 26px;
+  fill: var(--gold);
+}
+
 .coord {
+  font-family: var(--font-body);
   font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.35em;
   color: var(--gold);
   opacity: 0.75;
@@ -88,29 +105,43 @@ body {
 
 .wordmark {
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(1.9rem, 6vw, 3.1rem);
-  font-weight: 300;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   color: var(--ink);
 }
 
 .wordmark .accent {
   color: var(--gold-bright);
+}
+
+.submark {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
   font-weight: 500;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
 }
 
 .tagline {
-  margin: 0 0 0.6rem;
-  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
-  font-weight: 300;
+  margin: 2rem 0 0.6rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 400;
   color: var(--ink);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .sub {
   margin: 0 auto 2.5rem;
   max-width: 420px;
+  font-family: var(--font-body);
   font-size: 0.95rem;
+  font-weight: 300;
   line-height: 1.6;
   color: var(--ink-dim);
 }
@@ -131,6 +162,7 @@ body {
   border: 1px solid rgba(201, 162, 75, 0.3);
   border-radius: 4px;
   color: var(--ink);
+  font-family: var(--font-body);
   font-size: 0.95rem;
   outline: none;
   transition: border-color 0.2s ease, background 0.2s ease;
@@ -152,9 +184,11 @@ body {
   color: #10151d;
   border: 1px solid var(--gold);
   border-radius: 4px;
-  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.15s ease;
 }
@@ -177,6 +211,7 @@ body {
 .form-message {
   min-height: 1.4em;
   margin: 0.9rem 0 0;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--gold-bright);
 }
@@ -187,6 +222,7 @@ body {
 
 .footer {
   margin-top: 4rem;
+  font-family: var(--font-body);
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   color: var(--ink-dim);
