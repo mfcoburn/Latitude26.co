@@ -61,16 +61,10 @@ body {
 }
 
 .logo-mark {
-  width: clamp(84px, 18vw, 120px);
+  width: clamp(96px, 20vw, 140px);
   height: auto;
   margin: 0 auto 1.5rem;
   display: block;
-}
-
-.logo-degree {
-  font-family: var(--font-display);
-  font-size: 26px;
-  fill: var(--gold);
 }
 
 .coord {
@@ -220,8 +214,18 @@ body {
   color: #e08a8a;
 }
 
+.cities {
+  margin: 2.5rem 0 0;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
 .footer {
-  margin-top: 4rem;
+  margin-top: 1.25rem;
   font-family: var(--font-body);
   font-size: 0.75rem;
   letter-spacing: 0.05em;
