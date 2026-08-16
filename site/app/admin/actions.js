@@ -3,8 +3,10 @@
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { auth, isAllowedEmail } from '../../auth';
-import { BLOG_PATH, readFile, writeFile, deleteFile } from '../../lib/github';
-import { buildPostMarkdown, slugify } from '../../lib/postFile';
+import { readFile, writeFile, deleteFile } from '../../lib/github';
+import { getCollectionDef, resolveEntry } from '../../lib/schema';
+import { serializeDocument, validateDocument } from '../../lib/document';
+import { slugify } from '../../lib/postFile';
 
 /**
  * Re-checks the signed-in user against the allowlist on every write, so
@@ -14,73 +16,114 @@ async function requireEditor() {
   const session = await auth();
   const email = session?.user?.email;
 
-  if (!isAllowedEmail(email)) {
-    throw new Error('Not authorised.');
-  }
+  if (!isAllowedEmail(email)) throw new Error('Not authorised.');
 
   return { email, name: session.user.name ?? email };
 }
 
-function fieldsFromForm(formData) {
-  return {
-    title: (formData.get('title') ?? '').toString().trim(),
-    date: (formData.get('date') ?? '').toString().trim(),
-    author: (formData.get('author') ?? '').toString().trim(),
-    excerpt: (formData.get('excerpt') ?? '').toString().trim(),
-    cover: (formData.get('cover') ?? '').toString().trim(),
-    draft: formData.get('draft') === 'on',
-    body: (formData.get('body') ?? '').toString(),
-  };
-}
+export async function saveDoc(formData) {
+  let destination;
 
-export async function savePost(formData) {
-  const editor = await requireEditor();
-  const fields = fieldsFromForm(formData);
+  try {
+    const editor = await requireEditor();
 
-  if (!fields.title) throw new Error('A title is required.');
-  if (!fields.date) throw new Error('A date is required.');
+    const collectionName = (formData.get('collection') ?? '').toString();
+    const collection = getCollectionDef(collectionName);
+    if (!collection) return { error: 'Unknown collection.' };
 
-  // On edit the original filename is preserved so published URLs never break.
-  const existingSlug = (formData.get('slug') ?? '').toString().trim();
-  const slug = existingSlug || slugify(fields.title);
+    const isNew = Boolean((formData.get('isNew') ?? '').toString());
+    let slug = (formData.get('slug') ?? '').toString().trim();
 
-  if (!slug) throw new Error('Could not derive a filename from that title.');
+    let doc;
+    try {
+      doc = JSON.parse((formData.get('doc') ?? '{}').toString());
+    } catch {
+      return { error: 'The submitted content could not be read.' };
+    }
 
-  const path = `${BLOG_PATH}/${slug}.md`;
-  const existing = existingSlug ? await readFile(path) : null;
+    const fields =
+      collection.kind === 'folder'
+        ? collection.fields
+        : resolveEntry(collectionName, slug)?.fields;
 
-  if (!existingSlug && (await readFile(path))) {
-    throw new Error(`A post with the slug "${slug}" already exists.`);
+    if (!fields) return { error: 'Unknown entry.' };
+
+    const errors = validateDocument(doc, fields);
+    if (errors.length) return { error: errors.join(' ') };
+
+    // New folder entries derive their filename from the title field once.
+    // Existing entries keep theirs, so published URLs never break.
+    if (collection.kind === 'folder' && isNew) {
+      slug = slugify(doc[collection.titleField]);
+      if (!slug) return { error: 'Could not derive a filename from that title.' };
+    }
+
+    const entry = resolveEntry(collectionName, slug);
+    if (!entry) return { error: 'Unknown entry.' };
+
+    const existing = await readFile(entry.path);
+
+    if (collection.kind === 'folder' && isNew && existing) {
+      return { error: `An entry named "${slug}" already exists.` };
+    }
+
+    if (collection.kind !== 'folder' && !existing) {
+      return { error: 'That file is missing from the repository.' };
+    }
+
+    await writeFile({
+      path: entry.path,
+      content: serializeDocument(doc, fields, collection.format),
+      sha: existing?.sha,
+      message: `${isNew ? 'Add' : 'Update'} ${collectionName}: ${slug || collectionName}\n\nEdited via the admin by ${editor.name}.`,
+    });
+
+    revalidatePath('/', 'layout');
+
+    destination =
+      collection.kind === 'single'
+        ? `/admin/${collectionName}?saved=1`
+        : `/admin/${collectionName}/${slug}?saved=1`;
+  } catch (error) {
+    return { error: error.message ?? 'Something went wrong.' };
   }
 
-  await writeFile({
-    path,
-    content: buildPostMarkdown(fields),
-    sha: existing?.sha,
-    message: `${existingSlug ? 'Update' : 'Add'} journal post: ${fields.title}\n\nEdited via the admin by ${editor.name}.`,
-  });
-
-  revalidatePath('/admin');
-  revalidatePath('/blog');
-  redirect('/admin?saved=1');
+  redirect(destination);
 }
 
-export async function removePost(formData) {
-  const editor = await requireEditor();
-  const slug = (formData.get('slug') ?? '').toString().trim();
-  if (!slug) throw new Error('Missing post.');
+export async function deleteDoc(formData) {
+  let destination;
 
-  const path = `${BLOG_PATH}/${slug}.md`;
-  const existing = await readFile(path);
-  if (!existing) throw new Error('That post no longer exists.');
+  try {
+    const editor = await requireEditor();
 
-  await deleteFile({
-    path,
-    sha: existing.sha,
-    message: `Delete journal post: ${slug}\n\nDeleted via the admin by ${editor.name}.`,
-  });
+    const collectionName = (formData.get('collection') ?? '').toString();
+    const collection = getCollectionDef(collectionName);
 
-  revalidatePath('/admin');
-  revalidatePath('/blog');
-  redirect('/admin?deleted=1');
+    // Only folder collections may be deleted — the fixed pages, settings and
+    // legal notices are part of the site's structure.
+    if (!collection || collection.kind !== 'folder') {
+      return { error: 'This entry cannot be deleted.' };
+    }
+
+    const slug = (formData.get('slug') ?? '').toString().trim();
+    const entry = resolveEntry(collectionName, slug);
+    if (!entry) return { error: 'Unknown entry.' };
+
+    const existing = await readFile(entry.path);
+    if (!existing) return { error: 'That entry no longer exists.' };
+
+    await deleteFile({
+      path: entry.path,
+      sha: existing.sha,
+      message: `Delete ${collectionName}: ${slug}\n\nDeleted via the admin by ${editor.name}.`,
+    });
+
+    revalidatePath('/', 'layout');
+    destination = `/admin/${collectionName}?deleted=1`;
+  } catch (error) {
+    return { error: error.message ?? 'Something went wrong.' };
+  }
+
+  redirect(destination);
 }

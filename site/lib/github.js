@@ -12,8 +12,6 @@
 
 const API = 'https://api.github.com';
 
-export const BLOG_PATH = process.env.BLOG_CONTENT_PATH ?? 'site/content/blog';
-
 function repo() {
   return process.env.GITHUB_REPO ?? 'mfcoburn/Latitude26.co';
 }
@@ -48,10 +46,10 @@ async function ghFetch(path, options = {}) {
   return response.json();
 }
 
-/** Every Markdown file in the blog directory, as {name, path, sha}. */
-export async function listPostFiles() {
+/** Every Markdown file in a content directory, as {name, path, sha}. */
+export async function listFolderFiles(folder) {
   const entries = await ghFetch(
-    `/repos/${repo()}/contents/${BLOG_PATH}?ref=${branch()}`
+    `/repos/${repo()}/contents/${encodeURI(folder)}?ref=${branch()}`
   );
 
   if (!Array.isArray(entries)) return [];
