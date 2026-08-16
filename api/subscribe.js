@@ -28,6 +28,7 @@ module.exports = async function handler(req, res) {
       body: JSON.stringify({
         from: process.env.RESEND_FROM || 'Latitude26 Waitlist <waitlist@latitude26.co>',
         to: process.env.RESEND_TO || 'hello@latitude26.co',
+        reply_to: email,
         subject: 'Waiting list sign up',
         text: `New waitlist sign-up: ${email}`,
       }),
