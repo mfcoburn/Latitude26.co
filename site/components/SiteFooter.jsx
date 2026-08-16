@@ -19,6 +19,14 @@ export default function SiteFooter({ settings }) {
                 </a>
               </p>
             ) : null}
+
+            {settings?.contact?.phone ? (
+              <p style={{ marginTop: '0.25rem' }}>
+                <a href={`tel:${settings.contact.phone.replace(/[^+\d]/g, '')}`}>
+                  {settings.contact.phone}
+                </a>
+              </p>
+            ) : null}
           </div>
 
           <div>

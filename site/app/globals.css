@@ -395,6 +395,75 @@ a { color: var(--gold-bright); }
   margin-bottom: 0.5rem;
 }
 
+/* ---------- Journal ---------- */
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list > li {
+  border-top: 1px solid var(--rule);
+  padding: 2.25rem 0;
+}
+
+.post-list > li:first-child { border-top: 0; padding-top: 0; }
+
+.post-meta {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.post-list h2 { margin-bottom: 0.85rem; }
+
+.post-list h2 a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-list h2 a:hover { color: var(--gold-bright); }
+
+.post-more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 162, 75, 0.4);
+  padding-bottom: 0.2rem;
+}
+
+.post-more:hover { border-bottom-color: var(--gold-bright); }
+
+.post-cover {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
+/* Long-form body copy gets a narrower measure and more air. */
+.post-body { font-size: 1rem; }
+.post-body h2 { margin: 2.5rem 0 1rem; color: var(--ink); }
+.post-body h3 { margin: 2rem 0 0.75rem; color: var(--ink); }
+.post-body ul, .post-body ol { padding-left: 1.2rem; margin: 0 0 1.1rem; }
+.post-body li { margin-bottom: 0.5rem; }
+.post-body blockquote {
+  margin: 1.75rem 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--gold);
+  color: var(--ink);
+  font-style: italic;
+}
+.post-body img { max-width: 100%; height: auto; border-radius: 4px; }
+
 /* ---------- Buttons ---------- */
 
 .btn {

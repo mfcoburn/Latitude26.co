@@ -65,3 +65,35 @@ export async function getCollection(name) {
     (a, b) => (a.order ?? 999) - (b.order ?? 999) || a.slug.localeCompare(b.slug)
   );
 }
+
+/**
+ * Blog posts, newest first. Drafts are excluded from the built site, so a
+ * post saved as a draft in the CMS is committed but never rendered.
+ */
+export async function getPosts({ includeDrafts = false } = {}) {
+  const posts = await getCollection('blog');
+
+  return posts
+    .filter((post) => includeDrafts || !post.draft)
+    .sort((a, b) => new Date(b.date ?? 0) - new Date(a.date ?? 0));
+}
+
+/** A single post by slug, or null when it does not exist or is a draft. */
+export async function getPost(slug) {
+  const posts = await getPosts();
+  return posts.find((post) => post.slug === slug) ?? null;
+}
+
+/** Formats a post date for display, e.g. "16 August 2026". */
+export function formatPostDate(value) {
+  if (!value) return '';
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+
+  return new Intl.DateTimeFormat('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(date);
+}

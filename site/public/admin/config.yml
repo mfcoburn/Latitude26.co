@@ -262,6 +262,45 @@ collections:
               - { name: heading, label: Heading, widget: string }
               - { name: body, label: Body, widget: text }
 
+  # ---- Journal / blog (Colleen's collection) ----
+  # Listed first so it is the landing collection in the CMS sidebar.
+  - name: blog
+    label: Journal
+    label_singular: Post
+    folder: site/content/blog
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} — {{date | date("YYYY-MM-DD")}}'
+    sortable_fields: ['date', 'title']
+    view_filters:
+      - { label: Drafts, field: draft, pattern: true }
+      - { label: Published, field: draft, pattern: false }
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'DD MMMM YYYY', time_format: false }
+      - { name: author, label: Author, widget: string }
+      - { name: excerpt, label: Excerpt, widget: text, hint: 'One or two sentences shown on the journal index.' }
+      - { name: cover, label: Cover Image, widget: image, required: false }
+      - { name: draft, label: Draft, widget: boolean, default: true, hint: 'Drafts are saved but never appear on the site.' }
+      - { name: body, label: Post, widget: markdown }
+
+  - name: blog_page
+    label: Journal (page header)
+    files:
+      - name: blog
+        label: Journal Page
+        file: site/content/pages/blog.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: seo_description, label: SEO Description, widget: text }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headline, label: Headline, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - { name: empty_message, label: Empty State Message, widget: string }
+
   # ---- Services (one file per service) ----
   - name: services
     label: Services

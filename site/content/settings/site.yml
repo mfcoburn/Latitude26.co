@@ -12,8 +12,7 @@ locations:
 exclusivity_note: Annual membership, limited to 100 families.
 contact:
   email: hello@latitude26.co
-  # TODO: replace with the practice line once it is provisioned.
-  phone: ""
+  phone: "+1-888-238-3951"
 primary_cta:
   label: Request an Invitation
   href: /contact

@@ -7,6 +7,7 @@ export const PRIMARY_NAV = [
   { href: '/membership', label: 'Membership' },
   { href: '/about', label: 'About' },
   { href: '/service-area', label: 'Service Area' },
+  { href: '/blog', label: 'Journal' },
 ];
 
 export const LEGAL_NAV = [

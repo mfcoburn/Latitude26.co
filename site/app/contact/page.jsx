@@ -28,12 +28,25 @@ export default async function ContactPage() {
             </p>
           ) : null}
 
-          {settings.contact?.email ? (
+          {settings.contact?.email || settings.contact?.phone ? (
             <p className="form-note" style={{ marginTop: '1rem' }}>
-              Or write to{' '}
-              <a href={`mailto:${settings.contact.email}`}>
-                {settings.contact.email}
-              </a>
+              Or reach us directly
+              {settings.contact.phone ? (
+                <>
+                  {' '}on{' '}
+                  <a href={`tel:${settings.contact.phone.replace(/[^+\d]/g, '')}`}>
+                    {settings.contact.phone}
+                  </a>
+                </>
+              ) : null}
+              {settings.contact.email ? (
+                <>
+                  {settings.contact.phone ? ' or at ' : ' at '}
+                  <a href={`mailto:${settings.contact.email}`}>
+                    {settings.contact.email}
+                  </a>
+                </>
+              ) : null}
               .
             </p>
           ) : null}
