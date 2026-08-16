@@ -1,0 +1,20 @@
+# Global site settings — edited in Decap as a singleton ("Settings").
+# Every page pulls from here, so changing a value updates the whole site.
+practice_name: Latitude 26 Concierge Medical
+short_name: Latitude 26
+tagline: Private Medicine. Personal Attention. Exceptional Care.
+coordinate_mark: 26° 00′ N
+locations:
+  - Miami
+  - Fort Lauderdale
+  - Palm Beach
+# Signals the tier without stating a price. Never put figures on the site.
+exclusivity_note: Annual membership, limited to 100 families.
+contact:
+  email: hello@latitude26.co
+  # TODO: replace with the practice line once it is provisioned.
+  phone: ""
+primary_cta:
+  label: Request an Invitation
+  href: /contact
+legal_entity: Latitude 26 Medical LLC
