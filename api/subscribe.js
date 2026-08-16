@@ -1,5 +1,25 @@
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function formatEasternTimestamp(date) {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  })
+    .formatToParts(date)
+    .reduce((acc, part) => {
+      acc[part.type] = part.value;
+      return acc;
+    }, {});
+
+  const hour = parts.hour === '24' ? '00' : parts.hour;
+  return `${parts.month}/${parts.day}/${parts.year}:${hour}:${parts.minute}`;
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -30,7 +50,7 @@ module.exports = async function handler(req, res) {
         to: process.env.RESEND_TO || 'hello@latitude26.co',
         reply_to: email,
         subject: 'Waiting list sign up',
-        text: `New waitlist sign-up: ${email}`,
+        text: `New waitlist sign-up: ${email}\nSubmitted: ${formatEasternTimestamp(new Date())}`,
       }),
     });
 
