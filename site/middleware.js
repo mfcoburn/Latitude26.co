@@ -79,6 +79,10 @@ export function middleware(request) {
 }
 
 export const config = {
-  // Everything except Next's own static chunks, which carry no content.
-  matcher: ['/((?!_next/static|_next/image).*)'],
+  // Everything except:
+  //   _next/static, _next/image — build chunks, no content
+  //   admin, api/auth         — the content admin, which enforces its own
+  //                             Google sign-in. Exempting it means Colleen
+  //                             needs one credential, not two.
+  matcher: ['/((?!_next/static|_next/image|admin|api/auth).*)'],
 };
