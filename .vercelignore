@@ -1,0 +1,8 @@
+# The production (coming-soon) Vercel project builds from the repo root with
+# zero-config static hosting, which would otherwise serve every file in this
+# repo publicly. Exclude the unlaunched main site so its source is never
+# reachable at latitude26.co/site/*.
+#
+# The second Vercel project builds with Root Directory = site/, so this file
+# does not apply to it.
+site/

@@ -1,0 +1,357 @@
+# Decap CMS configuration.
+#
+# TODO(oauth): This backend is NOT usable yet. Decap's `github` backend needs an
+# OAuth proxy (a small service holding the GitHub OAuth client secret and
+# handling the auth handshake) before anyone can log in. Stand that up, then set
+# `base_url` / `auth_endpoint` below to point at it. Until then /admin will load
+# but authentication will fail — which is intentional while the site is gated.
+backend:
+  name: github
+  repo: mfcoburn/Latitude26.co
+  branch: main
+  # base_url: https://<oauth-proxy-host>
+  # auth_endpoint: /api/auth
+
+# All paths are relative to the REPOSITORY ROOT, not the Next.js project.
+# The site lives in site/, so every path is prefixed accordingly.
+media_folder: site/public/assets/uploads
+public_folder: /assets/uploads
+
+publish_mode: editorial_workflow
+
+collections:
+  # ---- Global settings (singleton) ----
+  - name: settings
+    label: Settings
+    files:
+      - name: site
+        label: Site Settings
+        file: site/content/settings/site.yml
+        fields:
+          - { name: practice_name, label: Practice Name, widget: string }
+          - { name: short_name, label: Short Name, widget: string }
+          - { name: tagline, label: Tagline, widget: string }
+          - { name: coordinate_mark, label: Coordinate Mark, widget: string }
+          - { name: locations, label: Locations, widget: list, field: { name: location, label: Location, widget: string } }
+          - { name: exclusivity_note, label: Exclusivity Note (no pricing), widget: string }
+          - name: contact
+            label: Contact
+            widget: object
+            fields:
+              - { name: email, label: Email, widget: string }
+              - { name: phone, label: Phone, widget: string, required: false }
+          - name: primary_cta
+            label: Primary Call to Action
+            widget: object
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: href, label: Link, widget: string }
+          - { name: legal_entity, label: Legal Entity, widget: string }
+
+  # ---- Fixed pages ----
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home
+        file: site/content/pages/home.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: seo_description, label: SEO Description, widget: text }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headline, label: Headline, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - name: value_proposition
+            label: Value Proposition
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Body, widget: text }
+          - name: pillars
+            label: Pillars
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
+          - name: cta
+            label: Call to Action
+            widget: object
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: href, label: Link, widget: string }
+          - { name: body, label: Closing Copy, widget: markdown, required: false }
+
+      - name: model
+        label: The Model
+        file: site/content/pages/model.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: seo_description, label: SEO Description, widget: text }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headline, label: Headline, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Body, widget: text }
+
+      - name: services
+        label: Services (page header)
+        file: site/content/pages/services.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: seo_description, label: SEO Description, widget: text }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headline, label: Headline, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - name: cta
+            label: Call to Action
+            widget: object
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: href, label: Link, widget: string }
+
+      - name: membership
+        label: Membership
+        file: site/content/pages/membership.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: seo_description, label: SEO Description, widget: text }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headline, label: Headline, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Body, widget: text }
+          - name: included
+            label: Included in Membership
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: items, label: Items, widget: list, field: { name: item, label: Item, widget: string } }
+          - name: add_ons
+            label: Add-Ons (names only — never pricing)
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: items, label: Items, widget: list, field: { name: item, label: Item, widget: string } }
+          - name: inquiry_flow
+            label: Inquiry Flow
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: steps
+                label: Steps
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: body, label: Body, widget: text }
+          - name: cta
+            label: Call to Action
+            widget: object
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: href, label: Link, widget: string }
+
+      - name: about
+        label: About / Providers
+        file: site/content/pages/about.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: seo_description, label: SEO Description, widget: text }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headline, label: Headline, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - name: providers_section
+            label: Providers Section
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Body, widget: text }
+          - name: cta
+            label: Call to Action
+            widget: object
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: href, label: Link, widget: string }
+
+      - name: service_area
+        label: Service Area
+        file: site/content/pages/service-area.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: seo_description, label: SEO Description, widget: text }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headline, label: Headline, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - name: areas
+            label: Areas
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: body, label: Body, widget: text }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Body, widget: text }
+          - name: cta
+            label: Call to Action
+            widget: object
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: href, label: Link, widget: string }
+
+      - name: contact
+        label: Contact / Request an Invitation
+        file: site/content/pages/contact.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: seo_description, label: SEO Description, widget: text }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headline, label: Headline, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - name: form
+            label: Form Copy
+            widget: object
+            fields:
+              - { name: name_label, label: Name Label, widget: string }
+              - { name: email_label, label: Email Label, widget: string }
+              - { name: phone_label, label: Phone Label, widget: string }
+              - { name: message_label, label: Message Label, widget: string }
+              - { name: submit_label, label: Submit Label, widget: string }
+              - { name: success_message, label: Success Message, widget: text }
+              - { name: privacy_note, label: Privacy Note, widget: text }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Body, widget: text }
+
+  # ---- Journal / blog (Colleen's collection) ----
+  # Listed first so it is the landing collection in the CMS sidebar.
+  - name: blog
+    label: Journal
+    label_singular: Post
+    folder: site/content/blog
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} — {{date | date("YYYY-MM-DD")}}'
+    sortable_fields: ['date', 'title']
+    view_filters:
+      - { label: Drafts, field: draft, pattern: true }
+      - { label: Published, field: draft, pattern: false }
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, format: 'YYYY-MM-DD', date_format: 'DD MMMM YYYY', time_format: false }
+      - { name: author, label: Author, widget: string }
+      - { name: excerpt, label: Excerpt, widget: text, hint: 'One or two sentences shown on the journal index.' }
+      - { name: cover, label: Cover Image, widget: image, required: false }
+      - { name: draft, label: Draft, widget: boolean, default: true, hint: 'Drafts are saved but never appear on the site.' }
+      - { name: body, label: Post, widget: markdown }
+
+  - name: blog_page
+    label: Journal (page header)
+    files:
+      - name: blog
+        label: Journal Page
+        file: site/content/pages/blog.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: seo_description, label: SEO Description, widget: text }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: headline, label: Headline, widget: string }
+              - { name: intro, label: Intro, widget: text }
+          - { name: empty_message, label: Empty State Message, widget: string }
+
+  # ---- Services (one file per service) ----
+  - name: services
+    label: Services
+    folder: site/content/services
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: order, label: Order, widget: number, value_type: int }
+      - { name: summary, label: Summary, widget: text }
+      - { name: highlights, label: Highlights, widget: list, field: { name: item, label: Item, widget: string } }
+      - { name: body, label: Body, widget: markdown }
+
+  # ---- Providers (one file per provider) ----
+  - name: providers
+    label: Providers
+    folder: site/content/providers
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: credentials, label: Credentials, widget: string, required: false }
+      - { name: role, label: Role, widget: string, required: false }
+      - { name: order, label: Order, widget: number, value_type: int }
+      - { name: photo, label: Portrait, widget: image, required: false }
+      - { name: body, label: Biography, widget: markdown }
+
+  # ---- Legal notices (placeholders until counsel supplies copy) ----
+  - name: legal
+    label: Legal Notices
+    files:
+      - name: privacy
+        label: Privacy Policy
+        file: site/content/legal/privacy.md
+        fields: &legal_fields
+          - { name: title, label: Title, widget: string }
+          - { name: status, label: Status, widget: select, options: ['pending-legal-review', 'approved'] }
+          - { name: body, label: Body, widget: markdown }
+      - name: terms
+        label: Terms of Use
+        file: site/content/legal/terms.md
+        fields: *legal_fields
+      - name: hipaa_notice
+        label: HIPAA Notice of Privacy Practices
+        file: site/content/legal/hipaa-notice.md
+        fields: *legal_fields
+      - name: medical_disclaimer
+        label: Medical Disclaimer
+        file: site/content/legal/medical-disclaimer.md
+        fields: *legal_fields
+      - name: non_discrimination
+        label: Non-Discrimination Notice
+        file: site/content/legal/non-discrimination.md
+        fields: *legal_fields
