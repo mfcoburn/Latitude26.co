@@ -4,8 +4,8 @@ import { NextResponse } from 'next/server';
  * Gate for the unlaunched site.
  *
  * Vercel Authentication only covers production deployments on the Pro plan, so
- * the gate lives in the app instead. Every route — pages, /admin, assets — sits
- * behind HTTP Basic Auth until launch.
+ * the gate lives in the app instead. Every route sits behind HTTP Basic Auth
+ * until launch.
  *
  * Env vars (set in the Vercel project, NOT in this repo):
  *   SITE_GATE_USER      username
@@ -79,10 +79,6 @@ export function middleware(request) {
 }
 
 export const config = {
-  // Everything except:
-  //   _next/static, _next/image — build chunks, no content
-  //   admin, api/auth         — the content admin, which enforces its own
-  //                             Google sign-in. Exempting it means Colleen
-  //                             needs one credential, not two.
-  matcher: ['/((?!_next/static|_next/image|admin|api/auth).*)'],
+  // Everything except Next's own build chunks, which carry no content.
+  matcher: ['/((?!_next/static|_next/image).*)'],
 };
