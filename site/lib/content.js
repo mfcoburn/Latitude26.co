@@ -5,8 +5,7 @@ import yaml from 'js-yaml';
 import { marked } from 'marked';
 
 // Content lives in site/content so that it is inside the Vercel project's
-// Root Directory. Decap writes to the same paths (prefixed with `site/`,
-// since Decap paths are relative to the repository root).
+// Root Directory — anything outside it is not readable by the build.
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
 /** Render a Markdown string to HTML. Returns '' for empty/missing input. */
