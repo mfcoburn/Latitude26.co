@@ -2,7 +2,7 @@
 # Every page pulls from here, so changing a value updates the whole site.
 practice_name: Latitude 26 Concierge Medical
 short_name: Latitude 26
-tagline: Private Medicine. Personal Attention. Exceptional Care.
+tagline: Private Medicine. Personal Care. Prioritized for You.
 coordinate_mark: 26° 00′ N
 locations:
   - Miami
@@ -14,6 +14,6 @@ contact:
   email: hello@latitude26.co
   phone: "+1-888-238-3951"
 primary_cta:
-  label: Request an Invitation
+  label: Request an Introduction
   href: /contact
 legal_entity: Latitude 26 Medical LLC
