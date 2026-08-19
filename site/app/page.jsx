@@ -15,7 +15,7 @@ export default async function HomePage() {
       />
 
       {page.problem ? (
-        <section className="section">
+        <section className="section section--center">
           <div className="shell">
             <h2 className="statement">{page.problem.heading}</h2>
             <p className="prose" style={{ marginTop: '1.5rem' }}>
@@ -28,7 +28,7 @@ export default async function HomePage() {
       {page.difference ? (
         <section className="section">
           <div className="shell">
-            <div className="section__head">
+            <div className="section__head section__head--center">
               <h2>{page.difference.heading}</h2>
             </div>
 
@@ -90,30 +90,6 @@ export default async function HomePage() {
                 </article>
               ))}
             </div>
-          </div>
-        </section>
-      ) : null}
-
-      {page.who_we_serve ? (
-        <section className="section">
-          <div className="shell">
-            <div className="section__head">
-              <h2>{page.who_we_serve.heading}</h2>
-            </div>
-
-            <p className="prose">{page.who_we_serve.body}</p>
-
-            {page.who_we_serve.note ? (
-              <p className="eyebrow" style={{ margin: '2rem 0 1.5rem' }}>
-                {page.who_we_serve.note}
-              </p>
-            ) : null}
-
-            {page.who_we_serve.cta?.label ? (
-              <Link className="btn" href={page.who_we_serve.cta.href}>
-                {page.who_we_serve.cta.label}
-              </Link>
-            ) : null}
           </div>
         </section>
       ) : null}

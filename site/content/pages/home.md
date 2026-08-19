@@ -33,7 +33,7 @@ difference:
       body: >-
         We cap our membership at a fraction of what traditional concierge
         practices allow. That means real time: 90-minute visits, not 10, and a
-        clinician who actually knows you.
+        provider who actually knows you.
     - title: House Calls, Not Appointments
       body: >-
         Care comes to you. Home, office, hotel suite, or yacht: fully equipped,
@@ -41,15 +41,16 @@ difference:
         in your membership, not billed as an add-on.
     - title: Discretion by Design
       body: >-
-        A pure cash-pay model means your care never touches an insurance claims
-        system. No third-party data, no institutional record-keeping. Just you
+        Your care never passes through a hospital system or an insurance claims
+        network. No crowded waiting rooms where you might be recognized, no
+        third-party data trail, no institutional file following you. Just you
         and your provider.
     - title: Two Decades of Trusted Clinical Judgment
       body: >-
-        Led by a physician assistant with over 20 years of frontline medical
-        experience, including senior medical officer service with the U.S.
-        Coast Guard and surgical care at a leading pediatric hospital.
-        Clinical judgment built under real pressure, now brought to your front
+        Led by a provider with over 20 years of frontline medical experience,
+        including as the senior medical officer for U.S. Coast Guard District 7
+        and surgical care at leading hospitals across South Florida. Clinical
+        judgment built under real pressure, from the frontline to your front
         door.
 membership:
   heading: Membership
@@ -76,17 +77,6 @@ beyond:
     - title: Advanced Longevity & Diagnostic Screening
       body: >-
         Early-detection and preventive testing beyond the standard physical.
-who_we_serve:
-  heading: Who We Serve
-  body: >-
-    Latitude 26 was built for people who lead: executives, entrepreneurs,
-    individuals, and families across Miami, Fort Lauderdale, and Palm Beach who
-    expect the same level of excellence in their healthcare that they demand
-    everywhere else in their lives.
-  note: Membership is limited and by application.
-  cta:
-    label: Inquire About Membership
-    href: /contact
 closing:
   heading: Your health deserves your time, and ours.
   body: >-
