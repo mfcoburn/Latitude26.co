@@ -528,13 +528,14 @@ a { color: var(--gold-bright); }
   .statement { max-width: 34ch; }
 }
 
-/* Centred section. The measure caps still apply, so the auto margins are
-   what actually pull the text into the middle of the shell. */
+/* Centred section. The reading-measure caps are released here so the text
+   runs to the shell margins rather than sitting in a narrow column. */
 .section--center { text-align: center; }
 
 .section--center .statement,
 .section--center .prose,
 .section--center .lede {
+  max-width: none;
   margin-left: auto;
   margin-right: auto;
 }
