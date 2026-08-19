@@ -1,13 +1,13 @@
 ---
-title: PLACEHOLDER — Welcome to the Journal
+title: PLACEHOLDER - Welcome to the Journal
 date: 2026-08-16
-author: PLACEHOLDER — Author Name
-excerpt: PLACEHOLDER — A one or two sentence summary shown on the journal index and in link previews.
+author: PLACEHOLDER - Author Name
+excerpt: PLACEHOLDER - A one or two sentence summary shown on the journal index and in link previews.
 cover: ""
 draft: false
 ---
 
-PLACEHOLDER — Post body, written in Markdown.
+PLACEHOLDER - Post body, written in Markdown.
 
 This file exists so the journal index and post template render with real data.
 Delete it once the first genuine post is published.

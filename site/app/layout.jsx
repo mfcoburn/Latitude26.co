@@ -7,8 +7,8 @@ export async function generateMetadata() {
   const settings = await getSettings();
   return {
     title: {
-      default: `${settings.practice_name} — ${settings.tagline}`,
-      template: `%s — ${settings.practice_name}`,
+      default: `${settings.practice_name} | ${settings.tagline}`,
+      template: `%s | ${settings.practice_name}`,
     },
     description: settings.tagline,
     icons: {

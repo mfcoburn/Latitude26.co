@@ -36,10 +36,10 @@ export default function InquiryForm({ copy }) {
 
     // TODO(backend): replace this stub with a POST to the enquiry endpoint.
     // eslint-disable-next-line no-console
-    console.warn('Enquiry form is stubbed — nothing was submitted.');
+    console.warn('Enquiry form is stubbed; nothing was submitted.');
 
     setStatus({
-      text: copy?.success_message ?? 'Thank you — your enquiry has been received.',
+      text: copy?.success_message ?? 'Thank you. Your enquiry has been received.',
       error: false,
     });
     setSubmitting(false);

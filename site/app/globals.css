@@ -304,7 +304,7 @@ a { color: var(--gold-bright); }
   margin-bottom: 0.9rem;
 }
 
-/* Provider card — scales from one provider to several unchanged. */
+/* Provider card, scales from one provider to several unchanged. */
 .provider {
   display: grid;
   gap: 1.25rem;

@@ -1,7 +1,7 @@
 ---
-# One file per provider. Add a provider by adding a file here — the About page
+# One file per provider. Add a provider by adding a file here, the About page
 # renders whatever is in this folder, ordered by `order`, with no redesign.
-name: PLACEHOLDER — Physician Name
+name: PLACEHOLDER - Physician Name
 credentials: MD
 role: Founding Physician
 order: 1
@@ -9,6 +9,6 @@ order: 1
 photo: ""
 ---
 
-PLACEHOLDER — Provider biography. Training, board certification, clinical
+PLACEHOLDER - Provider biography. Training, board certification, clinical
 interests, and the sentence that tells a prospective member why they would
 trust this physician with their family's care.
