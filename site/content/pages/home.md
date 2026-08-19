@@ -21,11 +21,11 @@ problem:
     Traditional primary care wasn't built for people whose time is their most
     valuable asset.
   body: >-
-    Even the best hospital systems in Miami, Fort Lauderdale, and Palm Beach
-    are stretched thin: ten-minute visits, months-long waits for a new patient
-    appointment, and a revolving door of providers who don't know your history.
-    For South Florida's most accomplished individuals and families, that's not
-    healthcare. That's a liability.
+    Even the best hospital systems are stretched thin: ten-minute visits,
+    months-long waits for a new patient appointment, and a revolving door of
+    providers who don't know your history. For South Florida's most
+    accomplished individuals and families, that's not healthcare. That's a
+    liability.
 difference:
   heading: The Latitude 26 Difference
   items:
