@@ -528,6 +528,19 @@ a { color: var(--gold-bright); }
   .statement { max-width: 34ch; }
 }
 
+/* Centred section. The measure caps still apply, so the auto margins are
+   what actually pull the text into the middle of the shell. */
+.section--center { text-align: center; }
+
+.section--center .statement,
+.section--center .prose,
+.section--center .lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section__head--center { text-align: center; }
+
 /* ---------- Forms ---------- */
 
 .form {
