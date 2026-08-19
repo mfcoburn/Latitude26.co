@@ -1,6 +1,6 @@
 /**
  * Repeatable provider card, driven by one file in content/providers/.
- * Renders identically for one provider or several — the About page maps over
+ * Renders identically for one provider or several, the About page maps over
  * the collection, so adding a provider needs no layout change.
  */
 export default function ProviderCard({ provider }) {

@@ -5,7 +5,7 @@ import yaml from 'js-yaml';
 import { marked } from 'marked';
 
 // Content lives in site/content so that it is inside the Vercel project's
-// Root Directory — anything outside it is not readable by the build.
+// Root Directory, anything outside it is not readable by the build.
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
 /** Render a Markdown string to HTML. Returns '' for empty/missing input. */
@@ -30,7 +30,7 @@ async function readMarkdown(relativePath) {
   return { ...data, body: content, bodyHtml: renderMarkdown(content) };
 }
 
-/** Global settings singleton — tagline, locations, contact, CTA. */
+/** Global settings singleton, tagline, locations, contact, CTA. */
 export async function getSettings() {
   return readYaml('settings/site.yml');
 }

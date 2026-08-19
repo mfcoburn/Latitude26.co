@@ -33,7 +33,7 @@ form.addEventListener('submit', async (event) => {
       throw new Error(data.error || 'Something went wrong. Please try again.');
     }
 
-    message.textContent = "You're on the waitlist — we'll be in touch when we open.";
+    message.textContent = "You're on the waitlist. We'll be in touch when we open.";
     form.classList.add('is-success');
   } catch (err) {
     message.textContent = err.message || 'Something went wrong. Please try again.';
