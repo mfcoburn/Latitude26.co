@@ -506,6 +506,27 @@ a { color: var(--gold-bright); }
 }
 
 .cta-band .eyebrow { margin-bottom: 1.5rem; }
+.cta-band .prose { margin-left: auto; margin-right: auto; }
+
+.cta-band__actions,
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero__actions { margin-top: 2.25rem; }
+
+/* A single sentence carrying a section on its own. */
+.statement {
+  max-width: 24ch;
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+}
+
+@media (min-width: 700px) {
+  .statement { max-width: 34ch; }
+}
 
 /* ---------- Forms ---------- */
 

@@ -1,4 +1,11 @@
-export default function PageHero({ hero, coordinate, showMark = false }) {
+import Link from 'next/link';
+
+export default function PageHero({
+  hero,
+  coordinate,
+  showMark = false,
+  actions,
+}) {
   if (!hero) return null;
 
   return (
@@ -24,6 +31,20 @@ export default function PageHero({ hero, coordinate, showMark = false }) {
         </div>
 
         {hero.intro ? <p className="lede">{hero.intro}</p> : null}
+
+        {actions?.length ? (
+          <div className="hero__actions">
+            {actions.map((action, index) => (
+              <Link
+                key={action.href}
+                className={index === 0 ? 'btn' : 'btn btn--ghost'}
+                href={action.href}
+              >
+                {action.label}
+              </Link>
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );
