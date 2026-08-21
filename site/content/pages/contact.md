@@ -3,7 +3,10 @@ title: Request an Invitation
 seo_description: Request an invitation to Latitude 26 Concierge Medical.
 hero:
   headline: Request an Invitation
-  intro: PLACEHOLDER - One or two sentences setting expectations, enquiries are reviewed privately and answered personally.
+  intro: >-
+    Membership is by application. Tell us a little about what you are looking
+    for in a practice, and we will respond personally to arrange a private
+    consultation.
 form:
   # Field set is fixed in the component; these are the visible labels.
   name_label: Name
