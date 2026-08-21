@@ -12,7 +12,7 @@ hero:
     unhurried, expert medical care directly to your home, office, or yacht,
     with no insurance, no waiting, and no compromise.
   actions:
-    - label: Request Introduction
+    - label: Request an Invitation
       href: /contact
     - label: Learn About Membership
       href: /membership
