@@ -190,6 +190,8 @@ a { color: var(--gold-bright); }
   text-transform: uppercase;
   padding: 0.7rem 0;
   transition: color 0.2s ease;
+  /* Multi-word labels must never break mid-phrase ("The / Model"). */
+  white-space: nowrap;
 }
 
 .site-nav a:hover,
@@ -206,7 +208,10 @@ a { color: var(--gold-bright); }
 
 .site-nav[data-open="true"] { display: block; }
 
-@media (min-width: 860px) {
+/* Eight nowrap labels, one of them "Request an Introduction", need roughly
+   950px of row. Below that the collapsed menu is used rather than a cramped
+   or overflowing single line. */
+@media (min-width: 1000px) {
   .nav-toggle { display: none; }
 
   .site-nav,
@@ -221,10 +226,15 @@ a { color: var(--gold-bright); }
   .site-nav ul {
     display: flex;
     align-items: center;
-    gap: 1.6rem;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: clamp(0.9rem, 1.5vw, 1.6rem);
   }
 
-  .site-nav a { padding: 0; }
+  .site-nav a {
+    padding: 0;
+    letter-spacing: 0.12em;
+  }
 }
 
 /* ---------- Sections ---------- */
