@@ -250,15 +250,17 @@ a { color: var(--gold-bright); }
 .section__head { margin-bottom: 2rem; }
 
 /* Justified body copy, page-level opt-in via <Sections className>.
-   Only above 700px. The measure is 68ch at full width but collapses with the
-   viewport, and justifying a ~35ch line on a phone opens rivers of whitespace
-   between words. Below the breakpoint the copy stays ragged-right.
-   No hyphenation: at this measure the browser would break words like
-   "sur-gery" across lines, which reads worse on display copy than the slightly
-   looser word spacing justification leaves behind. */
+   Only above 700px; below it the copy stays ragged-right, since justifying a
+   short line on a phone opens rivers of whitespace between words.
+   max-width: none releases the 68ch reading measure so the block fills the
+   .shell and its right edge lines up with the nav/menu above it rather than
+   stopping short in a narrow left column.
+   No hyphenation: the browser would break words like "sur-gery" across lines,
+   which reads worse on display copy than justification's word spacing. */
 @media (min-width: 700px) {
   .section--justified .prose {
     text-align: justify;
+    max-width: none;
   }
 }
 
