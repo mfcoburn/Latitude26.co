@@ -253,11 +253,12 @@ a { color: var(--gold-bright); }
    Only above 700px. The measure is 68ch at full width but collapses with the
    viewport, and justifying a ~35ch line on a phone opens rivers of whitespace
    between words. Below the breakpoint the copy stays ragged-right.
-   hyphens: auto lets the browser absorb slack where it supports it. */
+   No hyphenation: at this measure the browser would break words like
+   "sur-gery" across lines, which reads worse on display copy than the slightly
+   looser word spacing justification leaves behind. */
 @media (min-width: 700px) {
   .section--justified .prose {
     text-align: justify;
-    hyphens: auto;
   }
 }
 
