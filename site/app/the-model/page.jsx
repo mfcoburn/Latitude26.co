@@ -14,7 +14,7 @@ export default async function ModelPage() {
   return (
     <>
       <PageHero hero={page.hero} />
-      <Sections sections={page.sections} />
+      <Sections sections={page.sections} className="section--justified" />
       <CtaBand
         cta={settings.primary_cta}
         note={settings.exclusivity_note}

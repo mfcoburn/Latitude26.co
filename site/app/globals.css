@@ -249,6 +249,18 @@ a { color: var(--gold-bright); }
 
 .section__head { margin-bottom: 2rem; }
 
+/* Justified body copy, page-level opt-in via <Sections className>.
+   Only above 700px. The measure is 68ch at full width but collapses with the
+   viewport, and justifying a ~35ch line on a phone opens rivers of whitespace
+   between words. Below the breakpoint the copy stays ragged-right.
+   hyphens: auto lets the browser absorb slack where it supports it. */
+@media (min-width: 700px) {
+  .section--justified .prose {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
 .hero {
   padding: clamp(3.5rem, 12vw, 7rem) 0 clamp(2.5rem, 6vw, 4rem);
   text-align: center;
