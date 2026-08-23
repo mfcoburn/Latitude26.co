@@ -13,10 +13,10 @@ form:
   email_label: Email
   phone_label: Phone
   message_label: How can we help?
-  submit_label: Submit Enquiry
+  submit_label: Submit Inquiry
   # Shown after a successful submit once the backend is wired.
-  success_message: Thank you. Your enquiry has been received. We will be in touch personally.
-  privacy_note: PLACEHOLDER - A short line confirming enquiries are handled confidentially and never shared.
+  success_message: Thank you. Your inquiry has been received. We will be in touch personally.
+  privacy_note: PLACEHOLDER - A short line confirming inquiries are handled confidentially and never shared.
 sections:
   - heading: What happens next
     body: PLACEHOLDER - Describe the response time and that the next step is a private consultation.

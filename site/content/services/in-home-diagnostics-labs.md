@@ -6,7 +6,7 @@ highlights:
   - PLACEHOLDER - Phlebotomy at home
   - PLACEHOLDER - Point-of-care testing
   - PLACEHOLDER - Imaging coordination
-  - PLACEHOLDER - Results reviewed with your physician directly
+  - PLACEHOLDER - Results reviewed with your provider directly
 ---
 
 PLACEHOLDER - Body copy for this service. Describe what can be performed in

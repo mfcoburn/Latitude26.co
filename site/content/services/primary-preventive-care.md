@@ -1,7 +1,7 @@
 ---
 title: Primary & Preventive Care
 order: 1
-summary: PLACEHOLDER - Comprehensive primary care with the time to practise it properly.
+summary: PLACEHOLDER - Comprehensive primary care with the time to practice it properly.
 highlights:
   - PLACEHOLDER - Comprehensive annual evaluation
   - PLACEHOLDER - Chronic condition management
@@ -10,4 +10,4 @@ highlights:
 ---
 
 PLACEHOLDER - Body copy for this service. Describe what primary and preventive
-care looks like when the physician has ninety minutes rather than twelve.
+care looks like when the provider has ninety minutes rather than twelve.

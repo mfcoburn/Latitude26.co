@@ -1,6 +1,6 @@
 ---
 title: Journal
-seo_description: Notes on concierge medicine, prevention, and longevity from the physicians of Latitude 26.
+seo_description: Notes on concierge medicine, prevention, and longevity from the providers of Latitude 26.
 hero:
   headline: Journal
   intro: PLACEHOLDER - One sentence framing the journal. Notes from the practice rather than a content-marketing blog.

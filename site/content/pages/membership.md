@@ -2,7 +2,7 @@
 title: Membership
 seo_description: >-
   Membership at Latitude 26 Concierge Medical. An annual retainer, a capped
-  panel, and an invitation-based enquiry process.
+  panel, and an invitation-based inquiry process.
 hero:
   headline: Membership
   intro: PLACEHOLDER - One sentence on membership as a relationship rather than a plan.
@@ -17,7 +17,7 @@ included:
   heading: Included in membership
   items:
     - PLACEHOLDER - Unhurried primary and preventive care
-    - PLACEHOLDER - Direct access to your physician
+    - PLACEHOLDER - Direct access to your provider
     - PLACEHOLDER - House calls across the service area
     - PLACEHOLDER - Care coordination and specialist referral
 add_ons:
@@ -31,7 +31,7 @@ inquiry_flow:
   heading: How membership begins
   steps:
     - title: Request an invitation
-      body: PLACEHOLDER - A short enquiry, reviewed privately.
+      body: PLACEHOLDER - A short inquiry, reviewed privately.
     - title: A private consultation
       body: PLACEHOLDER - A conversation about fit, expectations, and terms, including fees.
     - title: Onboarding
