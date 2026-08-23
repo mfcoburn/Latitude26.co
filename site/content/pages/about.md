@@ -11,7 +11,7 @@ providers_section:
   intro: PLACEHOLDER - One line introducing the care team.
 sections:
   - heading: Practice philosophy
-    body: PLACEHOLDER - What the practice believes about time, continuity, and the provider–patient relationship.
+    body: PLACEHOLDER - What the practice believes about time, continuity, and the provider-patient relationship.
   - heading: Founding story
     body: PLACEHOLDER - Why the practice was founded and what it was a response to.
 cta:
