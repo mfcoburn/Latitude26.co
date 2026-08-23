@@ -11,7 +11,7 @@ locations:
 # Signals the tier without stating a price. Never put figures on the site.
 # The cap is PER PROVIDER, not practice-wide, do not shorten this in a way
 # that reads as a limit on the whole practice.
-exclusivity_note: Membership limited to 100 families per provider.
+exclusivity_note: Membership limited to 100 patients per provider.
 contact:
   email: hello@latitude26.co
   phone: "+1-888-238-3951"

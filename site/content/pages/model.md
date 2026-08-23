@@ -1,7 +1,7 @@
 ---
 title: The Model
 seo_description: >-
-  How care works at Latitude 26 — a panel capped at 100 families per provider,
+  How care works at Latitude 26 — a panel capped at 100 patients per provider,
   ninety-minute visits, unlimited house calls across Miami, Fort Lauderdale,
   and Palm Beach, and no insurance in the middle.
 hero:
@@ -41,7 +41,7 @@ sections:
       and the schedule required to support that many people has to be built in
       fifteen-minute increments.
 
-      Every Latitude 26 panel is capped at 100 families. Not as a marketing
+      Every Latitude 26 panel is capped at 100 patients. Not as a marketing
       device — as a clinical one. It is the number at which a provider can
       genuinely know your history, your family, your baseline, and what "not
       quite right" looks like for you specifically.
@@ -107,7 +107,7 @@ sections:
       responds. Never an outside service, and never someone without access to
       your record.
 
-      Because every panel is capped at 100 families, that access is a real
+      Because every panel is capped at 100 patients, that access is a real
       commitment rather than a marketing claim. A practice carrying two
       thousand patients could not make it.
 
