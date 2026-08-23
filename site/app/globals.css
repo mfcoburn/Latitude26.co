@@ -240,7 +240,7 @@ a { color: var(--gold-bright); }
 /* ---------- Sections ---------- */
 
 .section {
-  padding: clamp(3rem, 8vw, 5.5rem) 0;
+  padding: clamp(2.5rem, 5.5vw, 3.75rem) 0;
 }
 
 .section + .section {
