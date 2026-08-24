@@ -214,6 +214,15 @@ a { color: var(--gold-bright); }
 @media (min-width: 1000px) {
   .nav-toggle { display: none; }
 
+  /* Non-mobile only: the menu bar stays pinned to the top on scroll. The
+     header already has z-index 3 and a frosted translucent background, so
+     content scrolls under it legibly. Below 1000px the header scrolls away
+     with the page so it does not eat vertical space on small screens. */
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+
   .site-nav,
   .site-nav[data-open="false"] {
     display: block;
