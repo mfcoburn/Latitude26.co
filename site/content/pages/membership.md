@@ -100,10 +100,12 @@ inquiry_flow:
         either side, and no pressure to decide in the room.
     - title: Onboarding
       body: >-
-        Records are gathered and reviewed before your first visit rather than
-        during it. Your first appointment is a comprehensive baseline: a
-        complete history, a full examination, and laboratory work drawn in your
-        home. From that point you have your provider's direct line.
+        You are onboarded during your first visit, not before it. There are no
+        forms to work through alone at a kitchen table. You talk, and your
+        provider listens and records it: your history, your medications, what
+        has worked and what hasn't. The same visit includes a full examination
+        and laboratory work drawn in your home. From that point on, you have
+        your provider's direct line.
 cta:
   label: Request an Invitation
   href: /contact
