@@ -2,8 +2,7 @@
 title: Membership
 seo_description: >-
   Membership at Latitude 26: one annual retainer, a panel capped at 100
-  patients per provider, household pricing, and an annual term you can end with
-  thirty days' notice.
+  patients per provider, and household pricing.
 hero:
   headline: Membership
   intro: >-
@@ -83,21 +82,6 @@ benefits_note: >-
   providers and are typically covered by your existing plan. Latitude 26
   coordinates that care rather than paying for it. Add-on services sit outside
   the retainer and are arranged individually.
-sections_after:
-  - heading: Term and cancellation
-    body: |
-      Membership runs for a year and renews annually.
-
-      It can be ended at any point with thirty days' written notice. Any months
-      paid for and not used are prorated and returned. There is no exit fee, no
-      penalty, and no obligation to explain the decision.
-
-      This is deliberate. A practice that has to hold members through a contract
-      is not delivering what it promised. Latitude 26 would rather earn the
-      renewal.
-
-      Should you leave, your records are yours. A complete copy is provided at
-      no charge, in a form your next provider can use.
 inquiry_flow:
   heading: How membership begins
   steps:
