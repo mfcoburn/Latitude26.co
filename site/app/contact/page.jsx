@@ -53,7 +53,7 @@ export default async function ContactPage() {
         </div>
       </section>
 
-      <Sections sections={page.sections} />
+      <Sections sections={page.sections} className="section--justified" />
     </>
   );
 }
