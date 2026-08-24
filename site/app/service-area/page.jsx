@@ -36,7 +36,7 @@ export default async function ServiceAreaPage() {
         </section>
       ) : null}
 
-      <Sections sections={page.sections} />
+      <Sections sections={page.sections} className="section--justified" />
 
       <CtaBand cta={page.cta} note={settings.exclusivity_note} />
     </>
