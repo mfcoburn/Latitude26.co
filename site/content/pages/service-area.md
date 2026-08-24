@@ -40,14 +40,6 @@ sections:
       when the day does not permit otherwise. Your boat, at the dock or at
       anchor. There is no waiting room to sit in and no drive to make.
 
-      Distance is real, and the practice is honest about it. Visits across
-      central Broward can often be arranged the same day. Requests at the
-      northern and southern edges of the area are accommodated readily, but
-      scheduling accounts for the drive: a visit in Palm Beach or Coral Gables
-      is planned rather than squeezed in. Urgent matters are answered wherever
-      you are, at any hour, and the response is matched to the situation rather
-      than the postcode.
-
       For members who keep a second residence inside the area, a place in the
       city and a place on the water, care follows you between them. There is
       nothing to transfer and no one to notify.
