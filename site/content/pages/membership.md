@@ -81,7 +81,9 @@ benefits_note: >-
   specialist care, imaging, and prescription medication are billed by those
   providers and are typically covered by your existing plan. Latitude 26
   coordinates that care rather than paying for it. Add-on services sit outside
-  the retainer and are arranged individually.
+  the retainer and are arranged individually. And should you ever leave, your
+  records are yours: a complete copy is provided at no charge, in a form your
+  next provider can use.
 inquiry_flow:
   heading: How membership begins
   steps:
