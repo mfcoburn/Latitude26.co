@@ -10,7 +10,7 @@ export default function ProviderCard({ provider }) {
         <img
           className="provider__portrait"
           src={provider.photo}
-          alt={provider.name}
+          alt={provider.photo_alt ?? provider.name}
         />
       ) : (
         <div

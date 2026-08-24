@@ -346,6 +346,10 @@ a { color: var(--gold-bright); }
   max-width: 180px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  /* Sources are taller than 4:5 (Colleen's is ~9:16). Bias the crop toward the
+     top so a portrait keeps the head and shoulders rather than centering on the
+     torso and cutting the face. */
+  object-position: 50% 15%;
   border: 1px solid var(--rule);
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.02);
