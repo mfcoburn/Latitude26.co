@@ -10,10 +10,12 @@ export const PRIMARY_NAV = [
   { href: '/blog', label: 'Journal' },
 ];
 
+// This list drives both the footer "Notices" links and the /legal/<slug>
+// routes (generateStaticParams reads it). The Medical Disclaimer and
+// Non-Discrimination pages are kept as files in content/legal/ but delinked
+// for now; re-add their entries here to relink and re-route them.
 export const LEGAL_NAV = [
   { href: '/legal/privacy', label: 'Privacy Policy' },
   { href: '/legal/terms', label: 'Terms of Use' },
   { href: '/legal/hipaa-notice', label: 'HIPAA Notice' },
-  { href: '/legal/medical-disclaimer', label: 'Medical Disclaimer' },
-  { href: '/legal/non-discrimination', label: 'Non-Discrimination' },
 ];
