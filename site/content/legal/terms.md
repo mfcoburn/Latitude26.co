@@ -2,7 +2,7 @@
 title: Terms of Use
 ---
 
-Effective Date: [DATE]
+Effective Date: September 1, 2026
 
 These Terms of Use ("Terms") govern your access to and use of the website operated by Latitude 26 Medical, PLLC ("Latitude 26," "we," "us," or "our"). By accessing or using this website (the "Site"), you agree to be bound by these Terms. If you do not agree, please do not use the Site.
 

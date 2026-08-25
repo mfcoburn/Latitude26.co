@@ -2,7 +2,7 @@
 title: Privacy Policy
 ---
 
-Effective Date: [DATE]
+Effective Date: September 1, 2026
 
 This Privacy Policy describes how Latitude 26 Medical, PLLC ("Latitude 26," "we," "us," or "our") collects, uses, and protects information gathered through our website and in the course of providing concierge medical services. This policy governs information collected through the Site. Information collected in the course of the clinical, provider–patient relationship is governed separately by our HIPAA Notice of Privacy Practices.
 
