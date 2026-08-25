@@ -17,7 +17,7 @@ Latitude 26 Medical, PLLC is a Florida professional limited liability company pr
 
 **Information you provide to us.** When you submit an inquiry, request an invitation, or otherwise contact us through the Site, we may collect your name, email address, telephone number, and any information you choose to include in your message.
 
-**Information collected automatically.** When you visit the Site, we may automatically collect certain technical information, including your IP address, browser type, device information, pages viewed, and the dates and times of your visits. [ATTORNEY REVIEW: confirm actual analytics/cookie technologies in use once finalized; align this section with the Cookies section below and with any cookie-consent mechanism.]
+**Information collected automatically.** When you visit the Site, we may automatically collect certain technical information, including your IP address, browser type, device information, pages viewed, and the dates and times of your visits.
 
 **Health information.** We do not intend for the Site's general inquiry forms to collect detailed health information, and we ask that you not submit sensitive medical details through the website's contact forms. Health information collected in the course of your care as a member is addressed in our HIPAA Notice of Privacy Practices. [ATTORNEY REVIEW: confirm whether any Site form is intended to intake clinical information; if so, this section and the HIPAA cross-reference require revision.]
 
