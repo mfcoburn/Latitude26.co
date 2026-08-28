@@ -17,8 +17,8 @@ form:
   # Shown after a successful submit once the backend is wired.
   success_message: Thank you. Your inquiry has been received. We will be in touch personally.
   privacy_note: >-
-    Your inquiry is read only by the practice. It is never shared, sold, or
-    added to a mailing list.
+    Your inquiry is reviewed by Latitude 26 and is subject to our Privacy
+    Policy. We do not sell your personal information.
 sections:
   - heading: What happens next
     body: |

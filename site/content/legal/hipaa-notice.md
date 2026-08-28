@@ -6,7 +6,7 @@ Effective Date: September 1, 2026
 
 THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.
 
-Latitude 26 Medical, PLLC ("Latitude 26," "we," "us," or "our") is committed to protecting the privacy of your protected health information ("PHI"). We are required by law to maintain the privacy of your PHI, to provide you with this Notice of our legal duties and privacy practices, and to abide by the terms of the Notice currently in effect.
+Latitude 26 Medical LLC ("Latitude 26," "we," "us," or "our") is committed to protecting the privacy of your protected health information ("PHI"). We are required by law to maintain the privacy of your PHI, to provide you with this Notice of our legal duties and privacy practices, and to abide by the terms of the Notice currently in effect.
 
 ## How We May Use and Disclose Your Health Information
 
@@ -48,4 +48,4 @@ If you believe your privacy rights have been violated, you may file a complaint 
 
 ## Contact
 
-To exercise your rights, or for questions about this Notice, contact Latitude 26 Medical, PLLC at hello@latitude26.co or +1-888-238-3951.
+To exercise your rights, or for questions about this Notice, contact Latitude 26 Medical LLC at hello@latitude26.co or +1-888-238-3951.

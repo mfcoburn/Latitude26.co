@@ -4,13 +4,13 @@ title: Privacy Policy
 
 Effective Date: September 1, 2026
 
-This Privacy Policy describes how Latitude 26 Medical, PLLC ("Latitude 26," "we," "us," or "our") collects, uses, and protects information gathered through our website and in the course of providing concierge medical services. This policy governs information collected through the Site. Information collected in the course of the clinical, provider–patient relationship is governed separately by our HIPAA Notice of Privacy Practices.
+This Privacy Policy describes how Latitude 26 Medical LLC ("Latitude 26," "we," "us," or "our") collects, uses, and protects information gathered through our website and in the course of providing concierge medical services. This policy governs information collected through the Site. Information collected in the course of the clinical, provider–patient relationship is governed separately by our HIPAA Notice of Privacy Practices.
 
 By using this website, you agree to the practices described in this Privacy Policy.
 
 ## Who We Are
 
-Latitude 26 Medical, PLLC is a Florida professional limited liability company providing membership-based, cash-pay concierge medical services in Miami-Dade, Broward, and Palm Beach counties. Our services are delivered on a mobile basis at members' homes, offices, and other private locations.
+Latitude 26 Medical LLC is a Florida limited liability company providing membership-based, cash-pay concierge medical services in Miami-Dade, Broward, and Palm Beach counties. Our services are delivered on a mobile basis at members' homes, offices, and other private locations.
 
 ## Information We Collect
 
@@ -67,4 +67,4 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 
 ## Contact Us
 
-If you have questions about this Privacy Policy, please contact Latitude 26 Medical, PLLC at hello@latitude26.co or +1-888-238-3951.
+If you have questions about this Privacy Policy, please contact Latitude 26 Medical LLC at hello@latitude26.co or +1-888-238-3951.

@@ -4,7 +4,7 @@ title: Terms of Use
 
 Effective Date: September 1, 2026
 
-These Terms of Use ("Terms") govern your access to and use of the website operated by Latitude 26 Medical, PLLC ("Latitude 26," "we," "us," or "our"). By accessing or using this website (the "Site"), you agree to be bound by these Terms. If you do not agree, please do not use the Site.
+These Terms of Use ("Terms") govern your access to and use of the website operated by Latitude 26 Medical LLC ("Latitude 26," "we," "us," or "our"). By accessing or using this website (the "Site"), you agree to be bound by these Terms. If you do not agree, please do not use the Site.
 
 ## No Medical Advice; No Provider–Patient Relationship
 
@@ -56,4 +56,4 @@ We may revise these Terms at any time by posting an updated version on this page
 
 ## Contact Us
 
-Questions about these Terms may be directed to Latitude 26 Medical, PLLC at hello@latitude26.co or +1-888-238-3951.
+Questions about these Terms may be directed to Latitude 26 Medical LLC at hello@latitude26.co or +1-888-238-3951.
