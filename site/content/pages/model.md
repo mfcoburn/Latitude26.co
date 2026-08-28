@@ -2,8 +2,8 @@
 title: The Model
 seo_description: >-
   How care works at Latitude 26: a panel capped at 100 patients per provider,
-  ninety-minute visits, unlimited house calls across Miami, Fort Lauderdale,
-  and Palm Beach, and no insurance in the middle.
+  ninety-minute visits, unlimited house calls when clinically indicated across
+  Miami, Fort Lauderdale, and Palm Beach, and no insurance in the middle.
 hero:
   headline: The Model
   intro: >-
@@ -83,9 +83,9 @@ sections:
       your boat.
 
       House calls are not an add-on and not a surcharge. They are the ordinary
-      way care happens here, and they are included in the retainer without
-      limit. There is no waiting room, no parking garage, and no forty minutes
-      on I-95 to be seen for twenty.
+      way care happens here, included in the retainer and unlimited when
+      clinically indicated. There is no waiting room, no parking garage, and no
+      forty minutes on I-95 to be seen for twenty.
 
       The clinical capability travels. Point-of-care testing, in-home blood
       draws with samples processed on site for accuracy, minor procedures,
@@ -102,10 +102,10 @@ sections:
       while you are describing chest pain.
 
       Routine matters are answered the same day. Urgent matters are answered
-      whenever they happen: nights, weekends, holidays. If your provider is in
-      a procedure or otherwise unreachable, another Latitude 26 provider
-      responds. Never an outside service, and never someone without access to
-      your record.
+      whenever they happen: nights, weekends, holidays. Anyone who responds on
+      the practice's behalf is a Latitude 26 provider with access to your
+      record: never an outside service, and never someone who does not know
+      you.
 
       Because every panel is capped at 100 patients, that access is a real
       commitment rather than a marketing claim. A practice carrying two
@@ -118,17 +118,18 @@ sections:
 
   - heading: Continuity of care
     body: |
-      Access does not depend on one person being reachable.
+      Access does not run through a switchboard.
 
-      Latitude 26 retains a second credentialed provider who covers when your
-      provider is unavailable. Coverage is arranged inside the practice, by
-      someone with access to your record, not an outside answering service,
-      and not a rotating on-call pool meeting you for the first time at the
-      worst possible moment.
+      Every person who responds to you is a provider of this practice, working
+      from your record, never an outside answering service and never a rotating
+      on-call pool meeting you for the first time at the worst possible moment.
+      Today the practice is deliberately small, so the provider who knows you is
+      the provider who answers. That principle holds as it grows: any provider
+      who ever covers is one of the practice's own, inside the practice and
+      working from your record, never a stranger and never a service.
 
-      The capped panel is what makes this workable. A covering provider can
-      meaningfully step into one hundred records. No one can step into three
-      thousand.
+      The capped panel is what makes this workable. A provider can meaningfully
+      hold one hundred records in mind. No one can hold three thousand.
 
   - heading: How this differs from insurance-based practice
     body: |

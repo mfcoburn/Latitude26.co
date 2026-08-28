@@ -6,7 +6,7 @@ highlights:
   - Comprehensive annual evaluation and physical
   - "Chronic condition management: blood pressure, cholesterol, diabetes, thyroid"
   - Acute illness and injury, seen the same day
-  - Mental health care, including anxiety, depression, and attention disorders
+  - Mental health care, including anxiety and depression
   - Care for children and adolescents
   - Minor procedures performed in your home
   - Specialist referral, coordination, and follow-through
@@ -28,7 +28,7 @@ something acute happens, you are not triaged into the next available opening
 three weeks out. You are seen.
 
 It also includes the care people are least able to arrange for themselves.
-Anxiety, depression, and attention disorders are treated here as ordinary parts
+Anxiety and depression are treated here as ordinary parts
 of primary care: discreetly, in your own home, by a provider who already knows
 your history. No separate referral, no waiting list, no unfamiliar office, and
 no explaining yourself from the beginning to someone new.

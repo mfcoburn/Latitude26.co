@@ -2,8 +2,9 @@
 title: About
 seo_description: >-
   Colleen B. Coburn, PA-C: retired U.S. Coast Guard Lieutenant and founding
-  provider of Latitude 26 Concierge Medical. Three decades of primary care,
-  emergency medicine, and surgery across South Florida.
+  provider of Latitude 26 Concierge Medical. Over 30 years of combined military
+  and clinical healthcare experience, licensed as a physician assistant since
+  2014.
 hero:
   headline: About the Practice
   intro: >-

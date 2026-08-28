@@ -63,12 +63,12 @@ included:
   items:
     - Unhurried primary and preventive care, beginning at ninety minutes
     - "Direct access to your provider: routine matters the same day, urgent matters whenever they happen"
-    - Unlimited house calls across the service area
+    - Unlimited house calls when clinically indicated, across the service area
     - In-home phlebotomy, point-of-care testing, and results reviewed with you directly
     - Mental health care as part of primary care
     - Minor procedures performed in your home
     - Specialist referral, coordination, and follow-through
-    - Coverage by a second credentialed provider when yours is unavailable
+    - Any coverage kept in-house, never an outside answering or on-call service
 add_ons:
   heading: Available as add-ons
   # Add-ons are named only. Never attach figures to these.

@@ -10,9 +10,10 @@ photo: /assets/colleen-coburn-portrait.jpg
 photo_alt: Colleen B. Coburn, PA-C, founding provider of Latitude 26 Concierge Medical
 ---
 
-Colleen Coburn has practiced medicine for more than three decades: in Coast
-Guard clinics, in pediatric trauma bays, and in operating rooms across South
-Florida.
+Colleen Coburn brings over 30 years of combined military and clinical
+healthcare experience, and has been licensed as a physician assistant since
+2014. That work spans Coast Guard clinics, pediatric trauma bays, and operating
+rooms across South Florida.
 
 She began in 1995 as a U.S. Coast Guard Health Services Technician, rising to
 Clinic Supervisor before earning her Master of Science in Physician Assistant

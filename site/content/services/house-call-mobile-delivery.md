@@ -3,7 +3,7 @@ title: House-Call & Mobile Delivery
 order: 2
 summary: Care delivered at your home, your office, or your boat.
 highlights:
-  - Unlimited house calls within the service area
+  - Unlimited house calls within the service area, when clinically indicated
   - Visits at your office, by arrangement
   - Dockside and onboard visits
   - Unmarked arrival, no waiting room
