@@ -21,7 +21,7 @@ problem:
     Traditional primary care wasn't built for people whose time is their most
     valuable asset.
   body: >-
-    Even the best hospital systems are stretched thin: ten-minute visits,
+    Even the best hospital systems are stretched thin: fifteen-minute visits,
     months-long waits for a new patient appointment, and a revolving door of
     providers who don't know your history. For South Florida's most
     accomplished individuals and families, that's not healthcare. That's a
@@ -32,19 +32,20 @@ difference:
     - title: A Practice, Not a Panel
       body: >-
         We cap our membership at a fraction of what traditional concierge
-        practices allow. That means real time: 90-minute visits, not 10, and a
+        practices allow. That means real time: 90-minute visits, not 15, and a
         provider who actually knows you.
     - title: House Calls, Not Appointments
       body: >-
         Care comes to you. Home, office, hotel suite, or yacht: fully equipped,
-        fully private, on your schedule. House calls are unlimited and included
-        in your membership, not billed as an add-on.
+        fully private, on your schedule. House calls are unlimited when
+        clinically indicated and included in your membership, not billed as an
+        add-on.
     - title: Discretion by Design
       body: >-
         Your care never passes through a hospital system or an insurance claims
-        network. No crowded waiting rooms where you might be recognized, no
-        third-party data trail, no institutional file following you. Just you
-        and your provider.
+        network. Because the practice files no insurance claims, your visits
+        aren't added to an insurer's record of you. No crowded waiting rooms
+        where you might be recognized. Just you and your provider.
     - title: Two Decades of Trusted Clinical Judgment
       body: >-
         Led by a provider with over 20 years of frontline medical experience,
@@ -56,7 +57,7 @@ membership:
   heading: Membership
   intro: A single annual retainer. Everything included.
   items:
-    - Unlimited house calls across Miami-Dade, Broward, and Palm Beach
+    - Unlimited house calls when clinically indicated, across Miami-Dade, Broward, and Palm Beach
     - Same-day and after-hours access, 7 days a week
     - 'Full diagnostics: labs, EKG, and point-of-care testing on site'
     - Direct line to your provider, with no call center and no gatekeeping

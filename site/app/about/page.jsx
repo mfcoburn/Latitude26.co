@@ -24,7 +24,10 @@ export default async function AboutPage() {
         <section className="section">
           <div className="shell">
             <div className="section__head">
-              <h2>{page.providers_section?.heading ?? 'Your Physicians'}</h2>
+              <h2>
+                {page.providers_section?.heading ??
+                  (providers.length === 1 ? 'Your Provider' : 'Your Providers')}
+              </h2>
               {page.providers_section?.intro ? (
                 <p className="prose" style={{ marginTop: '0.75rem' }}>
                   {page.providers_section.intro}

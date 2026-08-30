@@ -5,7 +5,7 @@ import { useState } from 'react';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
- * Enquiry form for "Request an Invitation".
+ * Inquiry form for "Request an Invitation".
  *
  * TODO(backend): submission is deliberately NOT wired up. Before launch,
  * point this at a serverless function (mirroring api/subscribe.js in the repo
@@ -34,12 +34,12 @@ export default function InquiryForm({ copy }) {
 
     setSubmitting(true);
 
-    // TODO(backend): replace this stub with a POST to the enquiry endpoint.
+    // TODO(backend): replace this stub with a POST to the inquiry endpoint.
     // eslint-disable-next-line no-console
-    console.warn('Enquiry form is stubbed; nothing was submitted.');
+    console.warn('Inquiry form is stubbed; nothing was submitted.');
 
     setStatus({
-      text: copy?.success_message ?? 'Thank you. Your enquiry has been received.',
+      text: copy?.success_message ?? 'Thank you. Your inquiry has been received.',
       error: false,
     });
     setSubmitting(false);
@@ -69,7 +69,7 @@ export default function InquiryForm({ copy }) {
 
       <div>
         <button className="btn" type="submit" disabled={submitting}>
-          {copy?.submit_label ?? 'Submit Enquiry'}
+          {copy?.submit_label ?? 'Submit Inquiry'}
         </button>
       </div>
 

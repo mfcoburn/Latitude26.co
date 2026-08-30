@@ -70,7 +70,7 @@ export async function getCollection(name) {
  * post saved as a draft in the CMS is committed but never rendered.
  */
 export async function getPosts({ includeDrafts = false } = {}) {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('posts');
 
   return posts
     .filter((post) => includeDrafts || !post.draft)

@@ -214,6 +214,15 @@ a { color: var(--gold-bright); }
 @media (min-width: 1000px) {
   .nav-toggle { display: none; }
 
+  /* Non-mobile only: the menu bar stays pinned to the top on scroll. The
+     header already has z-index 3 and a frosted translucent background, so
+     content scrolls under it legibly. Below 1000px the header scrolls away
+     with the page so it does not eat vertical space on small screens. */
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+
   .site-nav,
   .site-nav[data-open="false"] {
     display: block;
@@ -240,7 +249,7 @@ a { color: var(--gold-bright); }
 /* ---------- Sections ---------- */
 
 .section {
-  padding: clamp(3rem, 8vw, 5.5rem) 0;
+  padding: clamp(2.5rem, 5.5vw, 3.75rem) 0;
 }
 
 .section + .section {
@@ -248,6 +257,21 @@ a { color: var(--gold-bright); }
 }
 
 .section__head { margin-bottom: 2rem; }
+
+/* Justified body copy, page-level opt-in via <Sections className>.
+   Only above 700px; below it the copy stays ragged-right, since justifying a
+   short line on a phone opens rivers of whitespace between words.
+   max-width: none releases the 68ch reading measure so the block fills the
+   .shell and its right edge lines up with the nav/menu above it rather than
+   stopping short in a narrow left column.
+   No hyphenation: the browser would break words like "sur-gery" across lines,
+   which reads worse on display copy than justification's word spacing. */
+@media (min-width: 700px) {
+  .section--justified .prose {
+    text-align: justify;
+    max-width: none;
+  }
+}
 
 .hero {
   padding: clamp(3.5rem, 12vw, 7rem) 0 clamp(2.5rem, 6vw, 4rem);
@@ -331,6 +355,10 @@ a { color: var(--gold-bright); }
   max-width: 180px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  /* Sources are taller than 4:5 (Colleen's is ~9:16). Bias the crop near the
+     top so a portrait keeps the whole head with a little headroom rather than
+     centering on the torso and cutting the face. */
+  object-position: 50% 5%;
   border: 1px solid var(--rule);
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.02);

@@ -18,11 +18,17 @@ export default async function MembershipPage() {
     <>
       <PageHero hero={page.hero} coordinate={settings.exclusivity_note} />
 
-      <Sections sections={page.sections} />
+      <Sections sections={page.sections} className="section--justified" />
 
       {(page.included || page.add_ons) && (
         <section className="section">
           <div className="shell">
+            {page.benefits_heading ? (
+              <div className="section__head">
+                <h2>{page.benefits_heading}</h2>
+              </div>
+            ) : null}
+
             <div className="grid grid--2">
               {page.included ? (
                 <div>
@@ -46,9 +52,17 @@ export default async function MembershipPage() {
                 </div>
               ) : null}
             </div>
+
+            {page.benefits_note ? (
+              <p className="prose" style={{ marginTop: '2rem' }}>
+                {page.benefits_note}
+              </p>
+            ) : null}
           </div>
         </section>
       )}
+
+      <Sections sections={page.sections_after} className="section--justified" />
 
       {page.inquiry_flow ? (
         <section className="section">

@@ -18,7 +18,7 @@ the root project so the unlaunched site is never served at `latitude26.co/site/*
 Colleen writes articles and emails them to Michael. Michael pastes the text
 here and asks for it to be published. To do that:
 
-1. Create `site/content/blog/<slug>.md` — slug is lowercase, hyphenated,
+1. Create `site/content/posts/<slug>.md` — slug is lowercase, hyphenated,
    derived from the title. The filename becomes the URL (`/blog/<slug>`), so
    **never rename an existing file** once published.
 2. Use exactly this frontmatter:
@@ -56,7 +56,7 @@ site/content/
 ├── settings/site.yml   tagline, locations, contact, primary CTA, exclusivity note
 ├── pages/              home, model, services, membership, about, service-area,
 │                       contact, blog  (one file each, distinct field shapes)
-├── blog/               one file per post
+├── posts/              one file per post
 ├── services/           one file per service, ordered by `order`
 ├── providers/          one file per physician, ordered by `order`
 └── legal/              five notices, all `status: pending-legal-review`
