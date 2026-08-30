@@ -32,7 +32,7 @@ difference:
     - title: A Practice, Not a Panel
       body: >-
         We cap our membership at a fraction of what traditional concierge
-        practices allow. That means real time: 90-minute visits, not 10, and a
+        practices allow. That means real time: 90-minute visits, not 15, and a
         provider who actually knows you.
     - title: House Calls, Not Appointments
       body: >-
