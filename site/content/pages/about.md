@@ -19,6 +19,16 @@ providers_section:
   intro: >-
     The practice is deliberately small. You will know your provider, and your
     provider will know you.
+  # Short, administrative compliance disclosure. Keep it factual and understated.
+  note: >-
+    As required by Florida law for physician assistants, your provider practices
+    in collaboration with a licensed supervising physician and maintains a formal
+    Supervisory Protocol. This arrangement is administrative: the supervising
+    physician does not see patients, is never a point of contact, and has no role
+    in the practice's business or day-to-day decisions. You see your provider
+    directly for all of your care, and your provider runs the practice. The
+    protocol provides for chart review and physician consultation as the law
+    requires, and places no one between you and your provider.
 sections:
   - heading: Practice philosophy
     body: |
