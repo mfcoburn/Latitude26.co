@@ -40,6 +40,12 @@ export default async function AboutPage() {
                 <ProviderCard key={provider.slug} provider={provider} />
               ))}
             </div>
+
+            {page.providers_section?.note ? (
+              <p className="form-note" style={{ marginTop: '2.5rem' }}>
+                {page.providers_section.note}
+              </p>
+            ) : null}
           </div>
         </section>
       ) : null}
