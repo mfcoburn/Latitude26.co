@@ -15,8 +15,8 @@ export async function generateMetadata() {
       icon: '/assets/favicon-32.png',
       apple: '/assets/apple-touch-icon.png',
     },
-    // The site is unlaunched. Keep it out of every index until go-live.
-    robots: { index: false, follow: false },
+    // Site is live. Allow search engines to index and follow.
+    robots: { index: true, follow: true },
   };
 }
 
