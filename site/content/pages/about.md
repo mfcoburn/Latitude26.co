@@ -55,8 +55,9 @@ sections:
       When a practice bills insurance, a third party with its own interests sits
       inside every clinical decision. When members pay the practice directly,
       that seat is empty. There is no incentive to see more people, order more
-      tests, or schedule a follow-up your care does not require. The practice is
-      paid to look after you well enough that you stay.
+      tests, or schedule a follow-up your care does not require. The practice
+      works for you, not an insurance company. You are the person we answer to,
+      and the only one we serve.
   - heading: Founding story
     body: |
       We live in a hectic world with high demands on our time. More often than
