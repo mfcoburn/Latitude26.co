@@ -4,12 +4,14 @@ Two separate sites live in this repo, deployed as two separate Vercel projects.
 
 | | Repo path | Vercel project | Status |
 |---|---|---|---|
-| Coming-soon gate | repo root (`index.html`) | `latitude26-co` | **LIVE** on latitude26.co |
-| Main site | `site/` | `latitude26-main-site` | unlaunched, behind Basic Auth |
+| Coming-soon page | repo root (`index.html`) | `latitude26-co` | currently on latitude26.co |
+| Main site | `site/` | `latitude26-main-site` | launch-ready, public at its `*.vercel.app` URL |
 
-**Do not change the coming-soon page's behaviour as the public entry point.**
-It is the only publicly reachable route. `.vercelignore` excludes `site/` from
-the root project so the unlaunched site is never served at `latitude26.co/site/*`.
+Launch is a **domain swap**: move `latitude26.co` (and `www`) from the
+`latitude26-co` project to `latitude26-main-site` in the Vercel dashboard.
+There is no app-level gate to disable — see "Launch" below. `.vercelignore`
+excludes `site/` from the root project so the main site is never served at
+`latitude26.co/site/*`.
 
 ---
 
@@ -80,23 +82,27 @@ and the layouts already handle one or many.
 
 ---
 
-## The gate
+## Launch
 
-`site/middleware.js` puts the whole main site behind HTTP Basic Auth. It
-**fails closed**: with credentials unset the site is unreachable rather than
-accidentally public.
+There is **no app-level auth gate**. An earlier `site/middleware.js` Basic Auth
+gate (and its `SITE_GATE_USER` / `SITE_GATE_PASSWORD` / `SITE_GATE_ENABLED` env
+vars) was removed; nothing in the code reads those vars anymore. Before launch
+the main site is kept off the public domain simply by not pointing
+`latitude26.co` at it — the `latitude26-main-site` project is otherwise publicly
+reachable at its own `*.vercel.app` URL.
 
-Env vars on the `latitude26-main-site` Vercel project:
+Indexing is already enabled for launch: `site/app/robots.js` allows `/`,
+`site/app/layout.jsx` sets `robots: { index: true, follow: true }`, and there is
+no `X-Robots-Tag` noindex header in `site/next.config.mjs`.
 
-| Variable | Purpose |
-|---|---|
-| `SITE_GATE_USER` | gate username |
-| `SITE_GATE_PASSWORD` | gate password |
-| `SITE_GATE_ENABLED` | set to exactly `false` to open the site publicly |
+**To launch (Vercel dashboard, domain swap):**
 
-**To launch:** set `SITE_GATE_ENABLED=false`, relax `site/app/robots.js` to
-allow indexing, drop the `X-Robots-Tag` header in `site/next.config.mjs`, then
-move the `latitude26.co` domain onto `latitude26-main-site`.
+1. `latitude26-co` project → Settings → Domains → remove `latitude26.co` and
+   `www.latitude26.co`.
+2. `latitude26-main-site` project → Settings → Domains → add `latitude26.co` and
+   `www.latitude26.co`.
+3. Verify `https://latitude26.co` serves the main site, then submit it to Google
+   Search Console to start indexing.
 
 ---
 
