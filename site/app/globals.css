@@ -406,25 +406,13 @@ a { color: var(--gold-bright); }
 
 .step-list {
   list-style: none;
-  counter-reset: step;
   margin: 0;
   padding: 0;
 }
 
 .step-list li {
-  counter-increment: step;
   border-top: 1px solid var(--rule);
   padding: 1.25rem 0;
-}
-
-.step-list li::before {
-  content: counter(step, decimal-leading-zero);
-  font-family: var(--font-display);
-  font-size: 0.86rem;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  display: block;
-  margin-bottom: 0.5rem;
 }
 
 /* ---------- Journal ---------- */
