@@ -89,7 +89,7 @@ sections:
 
       The clinical capability travels. Point-of-care testing, in-home blood
       draws with samples processed on site for accuracy, minor procedures,
-      orthopedic and fracture care, and IV therapy are all performed where you
+      orthopedic care, and IV therapy are all performed where you
       are.
 
   - heading: Direct access
