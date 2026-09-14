@@ -18,13 +18,10 @@ export default async function ServicesPage() {
     <>
       <PageHero hero={page.hero} />
 
-      {services.map((service, index) => (
+      {services.map((service) => (
         <section className="section section--justified" key={service.slug}>
           <div className="shell">
             <div className="section__head">
-              <span className="card__index">
-                {String(index + 1).padStart(2, '0')}
-              </span>
               <h2>{service.title}</h2>
             </div>
 

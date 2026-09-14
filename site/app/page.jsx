@@ -33,11 +33,8 @@ export default async function HomePage() {
             </div>
 
             <div className="grid grid--2">
-              {page.difference.items?.map((item, index) => (
+              {page.difference.items?.map((item) => (
                 <article className="card" key={item.title}>
-                  <span className="card__index">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
                   <h3>{item.title}</h3>
                   <p>{item.body}</p>
                 </article>
