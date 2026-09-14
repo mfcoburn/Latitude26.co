@@ -7,10 +7,9 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /**
  * Inquiry form for "Request an Invitation".
  *
- * TODO(backend): submission is deliberately NOT wired up. Before launch,
- * point this at a serverless function (mirroring api/subscribe.js in the repo
- * root, which sends via Resend) and remove the stub below. Until then the form
- * validates input and reports success without transmitting anything.
+ * Submits to /api/inquiry, which sends a notification to the practice and an
+ * acknowledgment to the sender via Resend. Requires RESEND_API_KEY on the
+ * latitude26-main-site Vercel project.
  */
 export default function InquiryForm({ copy }) {
   const [status, setStatus] = useState({ text: '', error: false });
@@ -18,9 +17,12 @@ export default function InquiryForm({ copy }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const form = new FormData(event.currentTarget);
+    const formEl = event.currentTarget;
+    const form = new FormData(formEl);
     const name = (form.get('name') ?? '').toString().trim();
     const email = (form.get('email') ?? '').toString().trim();
+    const phone = (form.get('phone') ?? '').toString().trim();
+    const message = (form.get('message') ?? '').toString().trim();
 
     if (!name) {
       setStatus({ text: 'Please enter your name.', error: true });
@@ -33,16 +35,41 @@ export default function InquiryForm({ copy }) {
     }
 
     setSubmitting(true);
+    setStatus({ text: '', error: false });
 
-    // TODO(backend): replace this stub with a POST to the inquiry endpoint.
-    // eslint-disable-next-line no-console
-    console.warn('Inquiry form is stubbed; nothing was submitted.');
+    try {
+      const response = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, message }),
+      });
 
-    setStatus({
-      text: copy?.success_message ?? 'Thank you. Your inquiry has been received.',
-      error: false,
-    });
-    setSubmitting(false);
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        setStatus({
+          text:
+            data.error ??
+            'Something went wrong sending your inquiry. Please try again.',
+          error: true,
+        });
+        setSubmitting(false);
+        return;
+      }
+
+      formEl.reset();
+      setStatus({
+        text:
+          copy?.success_message ?? 'Thank you. Your inquiry has been received.',
+        error: false,
+      });
+    } catch {
+      setStatus({
+        text: 'Could not reach the server. Please try again in a moment.',
+        error: true,
+      });
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
