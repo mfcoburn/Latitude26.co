@@ -42,7 +42,7 @@ export default async function AboutPage() {
             </div>
 
             {page.providers_section?.note ? (
-              <p className="form-note" style={{ marginTop: '2.5rem' }}>
+              <p className="form-note provider-note" style={{ marginTop: '2.5rem' }}>
                 {page.providers_section.note}
               </p>
             ) : null}

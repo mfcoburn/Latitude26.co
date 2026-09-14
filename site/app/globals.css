@@ -605,6 +605,13 @@ a { color: var(--gold-bright); }
   max-width: 520px;
 }
 
+/* Supervisory-protocol disclosure on the About page: one step smaller than
+   .form-note and spanning the full shell width rather than the 520px column. */
+.provider-note {
+  font-size: 0.78rem;
+  max-width: 100%;
+}
+
 .form-message {
   min-height: 1.4em;
   font-size: 0.9rem;
