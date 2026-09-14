@@ -56,4 +56,4 @@ We may revise these Terms at any time by posting an updated version on this page
 
 ## Contact Us
 
-Questions about these Terms may be directed to Latitude 26 Medical LLC at hello@latitude26.co or +1-888-238-3951.
+Questions about these Terms may be directed to Latitude 26 Medical LLC at info@latitude26.co or +1-888-238-3951.

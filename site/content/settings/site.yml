@@ -13,7 +13,7 @@ locations:
 # that reads as a limit on the whole practice.
 exclusivity_note: Membership limited to 100 patients per provider.
 contact:
-  email: hello@latitude26.co
+  email: info@latitude26.co
   phone: "+1-888-238-3951"
 primary_cta:
   label: Request an Invitation

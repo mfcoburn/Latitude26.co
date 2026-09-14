@@ -48,4 +48,4 @@ If you believe your privacy rights have been violated, you may file a complaint 
 
 ## Contact
 
-To exercise your rights, or for questions about this Notice, contact Latitude 26 Medical LLC at hello@latitude26.co or +1-888-238-3951.
+To exercise your rights, or for questions about this Notice, contact Latitude 26 Medical LLC at info@latitude26.co or +1-888-238-3951.

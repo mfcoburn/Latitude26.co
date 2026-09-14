@@ -103,6 +103,6 @@ move the `latitude26.co` domain onto `latitude26-main-site`.
 ## Waitlist form (coming-soon page)
 
 `api/subscribe.js` validates the submitted email and sends a
-"Waiting list sign up" notification to hello@latitude26.co via Resend, with
+"Waiting list sign up" notification to info@latitude26.co via Resend, with
 `Reply-To` set to the submitted address and an Eastern-time timestamp in the
 body. Needs `RESEND_API_KEY` on the `latitude26-co` project.

@@ -67,4 +67,4 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 
 ## Contact Us
 
-If you have questions about this Privacy Policy, please contact Latitude 26 Medical LLC at hello@latitude26.co or +1-888-238-3951.
+If you have questions about this Privacy Policy, please contact Latitude 26 Medical LLC at info@latitude26.co or +1-888-238-3951.
