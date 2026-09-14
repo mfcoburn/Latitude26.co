@@ -49,7 +49,7 @@ difference:
     - title: Two Decades of Trusted Clinical Judgment
       body: >-
         Led by a provider with over 20 years of frontline medical experience,
-        including as the senior medical officer for U.S. Coast Guard District 7
+        including as the senior medical officer for U.S. Coast Guard Base Miami Beach
         and surgical care at leading hospitals across South Florida. Clinical
         judgment built under real pressure, from the frontline to your front
         door.
