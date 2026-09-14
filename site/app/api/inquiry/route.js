@@ -83,7 +83,7 @@ export async function POST(request) {
 
   const from = process.env.RESEND_FROM || 'Latitude 26 <inquiries@latitude26.co>';
   const to = process.env.RESEND_INQUIRY_TO || process.env.RESEND_TO || 'info@latitude26.co';
-  const phone = process.env.PRACTICE_PHONE || '+1-888-238-3951';
+  const practicePhone = process.env.PRACTICE_PHONE || '+1-888-238-3951';
   const submittedAt = formatEasternTimestamp(new Date());
 
   // 1) Notify the practice. This is the critical send.
@@ -130,7 +130,7 @@ export async function POST(request) {
         'personally.',
         '',
         'If your matter is time-sensitive, you can reach us directly by',
-        `phone at ${phone}.`,
+        `phone at ${practicePhone}.`,
         '',
         'Warm regards,',
         'Latitude 26 Concierge Medical',
