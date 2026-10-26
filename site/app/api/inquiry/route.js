@@ -3,7 +3,7 @@
 // handler on the main-site project. Sends a notification to the practice and an
 // acknowledgment to the person who submitted.
 //
-// Requires RESEND_API_KEY on the latitude26-main-site Vercel project. Optional:
+// Requires RESEND_API_KEY on the latitude26-co Vercel project (the main site). Optional:
 // RESEND_FROM (verified sender), RESEND_INQUIRY_TO / RESEND_TO (recipient).
 
 export const runtime = 'nodejs';

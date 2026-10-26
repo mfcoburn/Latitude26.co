@@ -1,17 +1,17 @@
 # Latitude 26 Concierge Medical
 
-Two separate sites live in this repo, deployed as two separate Vercel projects.
+Two separate sites live in this repo, deployed as two separate Vercel projects
+(in the `latitude26` Vercel team).
 
 | | Repo path | Vercel project | Status |
 |---|---|---|---|
-| Coming-soon page | repo root (`index.html`) | `latitude26-co` | currently on latitude26.co |
-| Main site | `site/` | `latitude26-main-site` | launch-ready, public at its `*.vercel.app` URL |
+| Main site | `site/` | `latitude26-co` | **live on latitude26.co** |
+| Coming-soon page | repo root (`index.html`) | `latitude26-co-old` | retired, still builds on every push |
 
-Launch is a **domain swap**: move `latitude26.co` (and `www`) from the
-`latitude26-co` project to `latitude26-main-site` in the Vercel dashboard.
-There is no app-level gate to disable — see "Launch" below. `.vercelignore`
-excludes `site/` from the root project so the main site is never served at
-`latitude26.co/site/*`.
+The site has launched. Both projects rebuild on every push to `main`; the
+GitHub commit statuses `Vercel – latitude26-co` and `Vercel – latitude26-co-old`
+report each one. (Commits before mid-September 2026 show the main site under its
+earlier project name, `latitude26-main-site`.)
 
 ---
 
@@ -77,38 +77,30 @@ and the layouts already handle one or many.
 - **Do not write legal copy.** The five files in `content/legal/` are
   deliberately placeholders pending counsel's review.
 - Body copy still marked `PLACEHOLDER —` is awaiting Michael's real copy.
-- The contact form (`components/InquiryForm.jsx`) validates but deliberately
-  does not submit anywhere yet — see `TODO(backend)`.
 
 ---
 
-## Launch
+## Hosting and indexing
 
 There is **no app-level auth gate**. An earlier `site/middleware.js` Basic Auth
 gate (and its `SITE_GATE_USER` / `SITE_GATE_PASSWORD` / `SITE_GATE_ENABLED` env
-vars) was removed; nothing in the code reads those vars anymore. Before launch
-the main site is kept off the public domain simply by not pointing
-`latitude26.co` at it — the `latitude26-main-site` project is otherwise publicly
-reachable at its own `*.vercel.app` URL.
+vars) was removed; nothing in the code reads those vars anymore.
 
-Indexing is already enabled for launch: `site/app/robots.js` allows `/`,
-`site/app/layout.jsx` sets `robots: { index: true, follow: true }`, and there is
-no `X-Robots-Tag` noindex header in `site/next.config.mjs`.
-
-**To launch (Vercel dashboard, domain swap):**
-
-1. `latitude26-co` project → Settings → Domains → remove `latitude26.co` and
-   `www.latitude26.co`.
-2. `latitude26-main-site` project → Settings → Domains → add `latitude26.co` and
-   `www.latitude26.co`.
-3. Verify `https://latitude26.co` serves the main site, then submit it to Google
-   Search Console to start indexing.
+Indexing is enabled: `site/app/robots.js` allows `/`, `site/app/layout.jsx` sets
+`robots: { index: true, follow: true }`, and there is no `X-Robots-Tag` noindex
+header in `site/next.config.mjs`.
 
 ---
 
-## Waitlist form (coming-soon page)
+## Forms
 
-`api/subscribe.js` validates the submitted email and sends a
-"Waiting list sign up" notification to info@latitude26.co via Resend, with
-`Reply-To` set to the submitted address and an Eastern-time timestamp in the
-body. Needs `RESEND_API_KEY` on the `latitude26-co` project.
+**Inquiry form (main site).** `components/InquiryForm.jsx` posts to
+`site/app/api/inquiry/route.js`, which sends a notification to the practice and
+an acknowledgment to the submitter via Resend. Needs `RESEND_API_KEY` on the
+`latitude26-co` project; `RESEND_FROM` and `RESEND_INQUIRY_TO` / `RESEND_TO` are
+optional.
+
+**Waitlist form (retired coming-soon page).** `api/subscribe.js` validates the
+submitted email and sends a "Waiting list sign up" notification to
+info@latitude26.co via Resend, with `Reply-To` set to the submitted address and
+an Eastern-time timestamp in the body. Runs on `latitude26-co-old`.
