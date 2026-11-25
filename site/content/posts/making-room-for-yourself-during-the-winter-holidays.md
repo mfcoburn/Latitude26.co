@@ -44,7 +44,7 @@ Which traditions feel meaningful? Which gatherings do you enjoy? Are there obser
 
 Perhaps this year calls for a smaller meal, fewer gifts, a shorter visit, or help with preparations. You might choose to preserve a cherished ritual while simplifying the plans around it.
 
-If you don't celebrate, consider what you want from these weeks. Is it companionship, rest, time outdoors, the comfort of your usual routine or something else entirely?
+If you don't celebrate, consider what you want from these weeks. Is it companionship, rest, time outdoors, the comfort of your usual routine, or something else entirely?
 
 Your plans can reflect your values and present circumstances.
 
@@ -94,13 +94,13 @@ You can begin simply: “This time of year has been difficult, and I haven’t b
 
 Share what's changed, how it is affecting your day, and what concerns you. You do not need to know the cause before asking for support.
 
-If travel or observances affect your availability for appointments, discuss those plans with your care team so you can prepare together.
+If travel or observances affect your availability for appointments, discuss those plans with your provider so you can prepare together.
 
 ## Approach the coming year with room to adjust
 
 As the calendar turns, you may feel pressure to make sweeping changes or set ambitious goals, whether or not January marks a meaningful new beginning for you.
 
-You can choose one practical commitment that reflects what you need such as making an appointment you have postponed, asking for help, protecting time for a meal, or reconnecting with someone whose company you enjoy.
+You can choose one practical commitment that reflects what you need, such as making an appointment you have postponed, asking for help, protecting time for a meal, or reconnecting with someone whose company you enjoy.
 
 Choose something that fits your life, with room to adjust as circumstances change.
 
